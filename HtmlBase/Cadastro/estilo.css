@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo{
+    width: 165px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+}
+ span{
+     color: #909090;
+ }
+ 
+ .box_cadastro{
+     background-color: #ffff;
+     height: 461px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin: 0 auto;
+ }
+
+ input{
+     width: 267px;
+     height: 35px;
+     margin-top: 9px;
+     color: #909090;
+     background-color: #fafafa;
+     border: 1px solid #DCDCDC;
+
+ }
+
+.span1{
+    margin-top: 10px;
+    margin-left: 66px;
+    margin-right: 67px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.span2{
+    margin-top: 17px;
+    margin-bottom: 46px;
+    width: 267px;
+    font-size: 12px;
+    text-align: center;
+    
+}
+
+.cadastro{
+    background-color: #2686cc;
+    width: 267px;
+    height: 30px;
+    color: #ffff;
+    margin-top: 17px;
+}
+
+.botão{
+    color: #ffff;
+    background-color: #2686cc;
+    margin-top: 17px;
+}
+
+.box_log{
+    width: 342px;
+    height: 75px;
+    background-color: #ffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 9px;
+    
+}
+
+.cad{
+    color: #353535;
+    margin-top: 30px;
+    font-size: 12px;
+}
+
+body{
+    background-color: #fafafa;
+}
+
+.yey{
+    text-decoration: none;
+    color: #2686cc;
+}
+
+.alio{
+    background-color: transparent;
+    width: 113px;
+    height: 16px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #353535;
+    margin-top: 28px;
+}
+
+.appleplay{
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-top: 29px;
+    
+}
+
+.maca{
+    width: 133px;
+    height: 39px;
+    margin: 0 auto;
+    margin-right: 5px;
+}
+
+.play{
+    width: 133px;
+    height: 39px;
+    
+}
+
+.largura{
+    width: 342px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+

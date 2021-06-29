@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: white;
+    
 }
 
 .container{
@@ -15,7 +15,7 @@ header{
     height: 54px;
     position: fixed;
     top: 0;
-    z-index: -2;
+    z-index: 2;
     display: flex;
     align-items: center;
     background-color: white;

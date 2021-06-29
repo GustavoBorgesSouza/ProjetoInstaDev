@@ -91,12 +91,131 @@
             </div>
             <div class="selecao">
                 <input type="text" class="input" placeholder="Digite a descricao da imagem">
-                <input class="escolher_img" type="file" name="Imagem" placeholder="Escolha a imagem">
+                <label class="label" for="id_escolherimg">Escolha a imagem</label>
+                <input class="escolher_img" type="file" name="Imagem" id="id_escolherimg">
+                <!-- <label for="id_escolherimg">Escolha a imagem</label> -->
                 <button type="submit"><p>Postar</p></button>
             </div>
         </section>
+
+        <div class="post">
+            <div class="postador">
+                <a href="#"><img src="../../wwwroot/assets_/padraoperfil.png" alt=""></a>
+                <div class="postador_infos">
+                    <a href="#">Nome_usuario</a>
+                    <p class="legenda">A vida é bela</p>
+                </div>
+            </div>
+
+            <img class="imagem_postada" src="../../wwwroot/assets_/festajunho.jpg" alt="">
+
+            <div class="interacoes">
+                <i id="coracaozinho" class="far fa-heart"></i> 
+                <!-- para fazer curtida faz um js chamando esse id e mudando a classe far para fas e adicionando 1 na contadora -->
+                <i class="far fa-comment"></i>
+                <input type="text" placeholder="Comentar...">
+            </div>
+            <p class="numero_curtidas">n curtidas</p>
+            <div class="comentarios">
+                <div class="comentario">
+                    <a href="#">moco_legal</a> 
+                    <p>Muito bonita a foto viu o</p>
+                </div>
+                <div class="comentario">
+                    <a href="#">moco_bonito</a> 
+                    <p>Muito legal a foto viu o</p>
+                </div>
+                <div class="comentario">
+                    <a href="#">moca_linda</a> 
+                    <p>Muito incrivel a foto viu o</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="post">
+            <div class="postador">
+                <a href="#"><img src="../../wwwroot/assets_/padraoperfil.png" alt=""></a>
+                <div class="postador_infos">
+                    <a href="#">Nome_usuario</a>
+                    <p class="legenda">A vida é bela</p>
+                </div>
+            </div>
+
+            <img class="imagem_postada" src="../../wwwroot/assets_/festajunho.jpg" alt="">
+
+            <div class="interacoes">
+                <i id="coracaozinho" class="far fa-heart"></i> 
+                <!-- para fazer curtida faz um js chamando esse id e mudando a classe far para fas e adicionando 1 na contadora -->
+                <i class="far fa-comment"></i>
+                <input type="text" placeholder="Comentar...">
+            </div>
+            <p class="numero_curtidas">n curtidas</p>
+            <div class="comentarios">
+                <div class="comentario">
+                    <a href="#">moco_legal</a> 
+                    <p>Muito bonita a foto viu o</p>
+                </div>
+                <div class="comentario">
+                    <a href="#">moco_bonito</a> 
+                    <p>Muito legal a foto viu o</p>
+                </div>
+                <div class="comentario">
+                    <a href="#">moca_linda</a> 
+                    <p>Muito incrivel a foto viu o</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="post">
+            <div class="postador">
+                <a href="#"><img src="../../wwwroot/assets_/padraoperfil.png" alt=""></a>
+                <div class="postador_infos">
+                    <a href="#">Nome_usuario</a>
+                    <p class="legenda">A vida é bela</p>
+                </div>
+            </div>
+
+            <img class="imagem_postada" src="../../wwwroot/assets_/festajunho.jpg" alt="">
+
+            <div class="interacoes">
+                <a href="#" onclick="Like()"><i id="coracaozinho" class="far fa-heart"></i></a>
+                <!-- <i id="coracaozinho" class="far fa-heart"></i>  -->
+                <!-- para fazer curtida faz um js chamando esse id e mudando a classe far para fas e adicionando 1 na contadora -->
+                <i class="far fa-comment"></i>
+                <input type="text" placeholder="Comentar...">
+            </div>
+            <p class="numero_curtidas">n curtidas</p>
+            <div class="comentarios">
+                <div class="comentario">
+                    <a href="#">moco_legal</a> 
+                    <p>Muito bonita a foto viu o</p>
+                </div>
+                <div class="comentario">
+                    <a href="#">moco_bonito</a> 
+                    <p>Muito legal a foto viu o</p>
+                </div>
+                <div class="comentario">
+                    <a href="#">moca_linda</a> 
+                    <p>Muito incrivel a foto viu o</p>
+                </div>
+            </div>
+        </div>
+        
     </main>
 
+    <footer>
+        <a href="#"><img src="../../" alt=""></a>
+    </footer>
+
+    <script>
+        function Like() {
+            var curtida = document.getElementById("coracaozinho");
+            curtida.classList.remove("far");
+            curtida.classList.add("fas");
+        }
+    </script>
+
 </body>
+
 
 </html>

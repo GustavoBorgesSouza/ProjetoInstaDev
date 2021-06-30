@@ -6,40 +6,55 @@
     <title>@ViewData["Title"] - ProjetoInstaDev</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/header.css" />
+    <link rel="stylesheet" href="~/css/footer.css" />
 </head>
+
 <body>
+
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ProjetoInstaDev</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <div class="container container_header">
+            <a href="#"><img class="logo" src="~/assets_/Instadev.png" alt=""></a>
+
+            <input type="text" class="input" placeholder="Pesquisar">
+
+            <nav class="menu_header">
+                <a href="#"><img src="~/assets_/Vector.png" alt=""></a>
+                <a href="#"><img src="~/assets_/plane 1.png" alt=""></a>
+                <a href="#"><img src="~/assets_/compass 1.png" alt=""></a>
+                <a href="#"><img src="~/assets_/Vector (1).png" alt=""></a>
+                <a href="#"><img src="~/assets_/thank-you 1.png" alt="."></a>
+            </nav>
+        </div>
     </header>
+
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - ProjetoInstaDev - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer>
+        <div class="container_footer">
+            <nav class="links">
+                <p>Instadev 2021</p>
+                <a href="#">-Suporte</a>
+                <a href="#">-Política de privacidade</a>
+                <a href="#">-Contato</a>
+            </nav>
+
+            <a href="#"><img class="logo" src="~/assets_/Instadev.png" alt=""></a>
+
+            <nav class="mobile">
+                <p>Baixe o app: </p>
+                <a href="https://www.apple.com/br/app-store/"><img src="~/assets_/app_store 1.png"
+                        alt=""></a>
+                <a href="https://play.google.com/store"><img src="~/assets_/google_play 1.png" alt=""></a>
+            </nav>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

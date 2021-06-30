@@ -74,8 +74,11 @@ main{
     justify-content: center;
 }
 
-.fotoperfil{
-    margin-top: 5%;
+.posicionamento_fotoperfil{
+    display: flex;
+    width: 665px;
+    justify-content: space-between;
+    margin-top: 8%;
 }
 
 .conteudo{
@@ -84,7 +87,6 @@ main{
     height: 157px;
     width: 380px;
     flex-direction: column;
-    margin-top: 4%;
 }
 
 .texto_conteudo{

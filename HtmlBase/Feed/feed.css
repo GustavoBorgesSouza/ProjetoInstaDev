@@ -47,7 +47,7 @@ body, main{
     z-index: 2;
     position: fixed;
     top: 76px;
-    right: 14%;
+    right: 16vw;
     display: flex;
     flex-direction: row;
     align-items: center;

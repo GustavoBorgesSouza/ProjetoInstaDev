@@ -1,0 +1,86 @@
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.box_conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between
+}
+
+.margin{
+    margin-top: 40px;
+}
+
+.box_inputs {
+    display : flex;
+    flex-direction: column;
+    width: 600px;
+    height: 60px;
+}
+
+.box_inputs  input {
+    background-color: white ;
+    height: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn_entrar {
+    width: 600px;
+    height: 40px;
+    background-color: #001F70 ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 20px ;
+    font-weight: bold;
+    padding: 5px  65px ;
+    border: none;
+}
+
+.box_linha{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.box_linha hr{
+    width: 253px;
+    margin: 0 37px;
+
+}
+
+.box_linha span{
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.box_senha{
+    margin-top: 40px;
+    
+}
+
+.box_senha a{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+}
+
+.box_cadastrar{
+    margin-top: 35px;
+}
+
+.box_cadastrar span{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.box_cadastrar a{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.box_obtenha{
+    margin-top: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

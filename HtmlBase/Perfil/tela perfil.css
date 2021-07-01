@@ -32,6 +32,7 @@ header{
     align-items: center;
     height: 46px;
     background-color: white;
+    width: 68vw;
 }
 
 .logo{
@@ -75,15 +76,16 @@ main{
 }
 
 .posicionamento_fotoperfil{
+    width: 828px;
     display: flex;
-    width: 665px;
-    justify-content: space-between;
-    margin-top: 8%;
+    justify-content: space-evenly;
+    margin-top: 7%;
+    margin-right: 8%;
 }
 
 .conteudo{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     height: 157px;
     width: 380px;
     flex-direction: column;
@@ -128,11 +130,13 @@ h2{
 .icone_publicacoes{
     height: 14px;
     width: 16px;
+    margin-right: 1%;
+    margin-top: 1px;
 }
 
 .publicacoes{
     height: 87px;
-    width: 1150px;
+    width: 68vw;
     margin-top: 2%;
     border-top: 1px solid #DCDCDC
 }
@@ -140,7 +144,7 @@ h2{
 .conteudo_publicacoes{
     display: flex;
     justify-content: center;
-    width: 800px;
+    width: 625px;
     margin-top: 2%;
     height: 87px;
 }
@@ -213,21 +217,20 @@ h3{
     display: flex;
     width: 414px;
     justify-content: space-between;
-    text-align: justify;
-    margin-top: -6%;  /*desculpa por tamanha atrocidade mas foi preciso*/
+    margin-top: -4%;  /*desculpa por tamanha atrocidade mas foi preciso*/
 }
 
-.comentario span{
+.user{
     font-family: Roboto, sans-serif;
     font-weight: 600;
     font-size: 13px;
 }
 
-.comentario p{
+.texto_comentario{
     font-family: Roboto, sans-serif;
     font-weight: 500;
     font-size: 13px;
-    max-width: 263px;
+    margin-left: 6%;
 }
 
 .todos_comentarios{
@@ -236,3 +239,8 @@ h3{
     font-size: 13px;
     text-decoration: none;
 }
+
+.user_comentario{
+    display: flex;
+    width: 364px;
+} 

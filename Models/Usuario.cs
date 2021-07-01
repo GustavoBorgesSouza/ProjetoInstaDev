@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.IO;
 using ProjetoInstaDev.Interfaces;
 
 namespace ProjetoInstaDev.Models
@@ -6,7 +8,7 @@ namespace ProjetoInstaDev.Models
     public class Usuario : Instadevbase, IUsuario
     {
         public string Email { get; set; }
-        public string IdUsuario { get; set; }
+        public int IdUsuario { get; set; }
         public string Nome { get; set; }
         public string Username { get; set; }
         public string Senha { get; set; }
@@ -20,25 +22,56 @@ namespace ProjetoInstaDev.Models
             CriarPastaEArquivo(CAMINHO);
 
         }
+
+        private string Preparar(Usuario u){
+            return $"{u.IdUsuario};{u.Email};{u.Nome};{u.Username};{u.Senha};{u.FotoPerfil}";
+        }
         
         public void AlterarDados(Usuario u)
         {
-            throw new System.NotImplementedException();
+            List<string> linhas = LerTodasLinhasCSV(CAMINHO);
+            linhas.RemoveAll(x => x.Split(";")[0] == u.IdUsuario.ToString());
+            linhas.Add(Preparar(u));
+            ReescreverCSV(CAMINHO, linhas);
         }
 
         public void Cadastrar(Usuario u)
         {
-            throw new System.NotImplementedException();
+            string[] linha = {Preparar(u)};
+            File.AppendAllLines(CAMINHO, linha);
         }
 
-        public void DeletarConta(Usuario u)
+        public void DeletarConta(int IdUsuario)
         {
-            throw new System.NotImplementedException();
+            List<string> linhas = LerTodasLinhasCSV(CAMINHO);
+            linhas.RemoveAll(x => x.Split(";")[0] == IdUsuario.ToString());
+            ReescreverCSV(CAMINHO, linhas);
         }
 
-        public void Logar(Usuario u)
+        public List<Usuario> LerUsuarios()
         {
-            throw new System.NotImplementedException();
+            List<Usuario> usuarios = new List<Usuario>();
+            string[] linhas = File.ReadAllLines(CAMINHO);
+
+            for (int i = 0; i < 8; i++)
+            {
+                var item = linhas[i];
+                string[] linha = item.Split(";");
+                Usuario usuario = new Usuario();
+
+                usuario.IdUsuario = Int32.Parse(linha[0]);
+                usuario.Email = linha[1];
+                usuario.Nome = linha[2];
+                usuario.Username = linha[3];
+                usuario.Senha = linha[4];
+                usuario.FotoPerfil = linha[5];
+
+                usuarios.Add(usuario);
+                
+            }
+
+            return usuarios;
+
         }
     }
 }

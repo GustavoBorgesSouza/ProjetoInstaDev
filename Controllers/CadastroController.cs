@@ -8,40 +8,28 @@ namespace ProjetoInstaDev.Controllers
     [Route("Cadastro")]
     public class CadastroController : Controller
     {
-        [TempData]
-        public string Mensagem { get; set; }
-
         Usuario usuarioModel = new Usuario();
 
         public IActionResult Index()
         {
+            ViewBag.usuarios = usuarioModel.LerUsuarios();
             return View();
         }
 
-        [Route("Logar")]
-        public IActionResult Logar(IFormCollection form)
+        [Route("Cadastrar")]
+        public IActionResult Cadastrar(IFormCollection form)
         {
-            List<string> usuariosCSV = usuarioModel.LerTodasLinhasCSV("Database/usuario.csv");
+            Usuario novoUsuario = new Usuario();
+            novoUsuario.Email = form["Email"];
+            novoUsuario.Nome = form["Nome"];
+            novoUsuario.Username = form["Username"];
+            novoUsuario.Senha = form["Senha"];
 
-            var logado = usuariosCSV.Find(
-                x =>
-                x.Split(";")[1] == form["Email"] &&
-                x.Split(";")[4] == form["Senha"]
-            );
+            usuarioModel.Cadastrar(novoUsuario);
 
-            if (logado != null)
-            {
-                HttpContext.Session.SetString("_Username", logado.Split(";")[3]);
-                HttpContext.Session.SetString("_UserNome", logado.Split(";")[2]);
-                HttpContext.Session.SetString("_UserFoto", logado.Split(";")[5]);
+            ViewBag.usuarios = usuarioModel.LerUsuarios();
 
-                return LocalRedirect("~/Feed");
-
-            }
-            else
-            {
-                return LocalRedirect("~/Login");
-            }
+            return LocalRedirect("~/Login");
         }
     }
 }

@@ -5,8 +5,8 @@ using ProjetoInstaDev.Models;
 
 namespace ProjetoInstaDev.Controllers
 {
-    [Route("Login")]
-    public class LoginController : Controller
+    [Route("Cadastro")]
+    public class CadastroController : Controller
     {
         [TempData]
         public string Mensagem { get; set; }
@@ -34,7 +34,7 @@ namespace ProjetoInstaDev.Controllers
                 HttpContext.Session.SetString("_Username", logado.Split(";")[3]);
                 HttpContext.Session.SetString("_UserNome", logado.Split(";")[2]);
                 HttpContext.Session.SetString("_UserFoto", logado.Split(";")[5]);
-                
+
                 return LocalRedirect("~/Feed");
 
             }

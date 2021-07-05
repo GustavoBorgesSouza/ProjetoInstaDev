@@ -27,6 +27,10 @@ body, main{
 .perfil{
     width: 68px;
     background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .perfil img{
@@ -47,18 +51,20 @@ body, main{
     z-index: 2;
     position: fixed;
     top: 76px;
-    right: 16vw;
+    right: 16.4vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 270px;
+    width: 240px;
     height: 113px;
     background-color: transparent;
 }
 
 .usuarioLogado img{
     height: 86px;
+    width: 86px;
+    border-radius: 50%;
 }
 
 .nomes{
@@ -106,7 +112,9 @@ body, main{
 .mostrar img{
     background-color: white;
     height: 42px;
+    width: 42px;
     margin-right: 16px;
+    border-radius: 50%;
 }
 
 .mostrar p{
@@ -115,6 +123,10 @@ body, main{
     font-family: 'Segoe UI';
     font-size: 16px;
     font-weight: 600;
+}
+
+form{
+    width: 100%;
 }
 
 .selecao{

@@ -10,6 +10,7 @@ namespace ProjetoInstaDev.Controllers
     public class FeedController : Controller
     {
         Post postModel = new Post();
+        Usuario usuarioModel = new Usuario();
         Random IdAleatorio = new Random();
         bool repetir;
 
@@ -20,6 +21,8 @@ namespace ProjetoInstaDev.Controllers
             ViewBag._UserNome = HttpContext.Session.GetString("_UserNome");
             ViewBag._UserFoto = HttpContext.Session.GetString("_UserFoto");
             ViewBag.Posts = postModel.MostrarPosts();
+            ViewBag.Usuarios = usuarioModel.LerTodos();
+
             return View();
         }
 
@@ -70,6 +73,8 @@ namespace ProjetoInstaDev.Controllers
             return LocalRedirect("~/Feed/Index");
 
         }
+
+        
 
         
         

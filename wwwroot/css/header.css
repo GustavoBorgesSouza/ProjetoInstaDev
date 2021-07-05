@@ -67,3 +67,9 @@ header{
     height: 28px;
     background-color: white;
 }
+
+.fotoperfil{
+    border-radius: 50%;
+    height: 28px;
+    width: 28px;
+}

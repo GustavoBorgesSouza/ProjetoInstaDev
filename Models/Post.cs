@@ -70,6 +70,7 @@ namespace ProjetoInstaDev.Models
                 {
                     post.IdPost = Int32.Parse(linha[0]);
                     post.FotoPost = linha[1];
+                    post.Descricao = linha[2];
                     post.UsernameUsuario = linha[3];
                     post.FotoUsuario = linha[4];
 

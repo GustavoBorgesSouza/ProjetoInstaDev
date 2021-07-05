@@ -10,9 +10,7 @@ namespace ProjetoInstaDev.Controllers
     public class CadastroController : Controller
     {
         Usuario usuarioModel = new Usuario();
-        Random numeroRandom = new Random();
-
-        int IdAleatorio;
+        Random IdAleatorio = new Random();
         bool repetir;
 
         [Route("Index")]
@@ -29,12 +27,12 @@ namespace ProjetoInstaDev.Controllers
 
             do
             {
-                IdAleatorio = numeroRandom.Next();
-                repetir = usuarioModel.VerificandoId(IdAleatorio);
+                Int32 IdPost = IdAleatorio.Next();
+                repetir = usuarioModel.VerificandoId(IdPost);
 
             } while(repetir == true);
 
-            novoUsuario.IdUsuario = IdAleatorio;
+            novoUsuario.IdUsuario = IdAleatorio.Next();
             novoUsuario.Email = form["Email"];
             novoUsuario.Nome = form["Nome"];
             novoUsuario.Username = form["Username"];

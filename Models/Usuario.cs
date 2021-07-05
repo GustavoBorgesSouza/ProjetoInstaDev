@@ -15,7 +15,7 @@ namespace ProjetoInstaDev.Models
         public string FotoPerfil { get; set; }
 
         public List<Post> PostsUsuario { get; set; }
-        public bool repetir;
+        public bool repetir { get; set;}
 
         private const string CAMINHO = "Database/Usuario.csv";
         
@@ -77,7 +77,7 @@ namespace ProjetoInstaDev.Models
             List<Usuario> usuarios = new List<Usuario>();
             string[] linhas = File.ReadAllLines(CAMINHO);
 
-            for (int i = 0; i < 8; i++)
+            for (int i = 1; i <= 7; i++)
             {
                 var item = linhas[i];
                 string[] linha = item.Split(";");

@@ -11,60 +11,28 @@
 
 <main class="container container_main">
     <section class="perfis">
+    @foreach (var item in ViewBag.Usuarios)
+    {
         <div class="perfil">
-            <img src="~/assets_/padraoperfil.png" alt="">
+            <img src="~/img/Usuarios/@item.FotoPerfil" alt="">
             <a href="#">
-                Nome_usuario
+                @item.Username
             </a>
         </div>
-        <div class="perfil">
-            <img src="~/assets_/padraoperfil.png" alt="">
-            <a href="#">
-                Nome_usuario
-            </a>
-        </div>
-        <div class="perfil">
-            <img src="~/assets_/padraoperfil.png" alt="">
-            <a href="#">
-                Nome_usuario
-            </a>
-        </div>
-        <div class="perfil">
-            <img src="~/assets_/padraoperfil.png" alt="">
-            <a href="#">
-                Nome_usuario
-            </a>
-        </div>
-        <div class="perfil">
-            <img src="~/assets_/padraoperfil.png" alt="">
-            <a href="#">
-                Nome_usuario
-            </a>
-        </div>
-        <div class="perfil">
-            <img src="~/assets_/padraoperfil.png" alt="">
-            <a href="#">
-                Nome_usuario
-            </a>
-        </div>
-        <div class="perfil">
-            <img src="~/assets_/padraoperfil.png" alt="">
-            <a href="#">
-                Nome_usuario
-            </a>
-        </div>
+    }
     </section>
 
     <div class="usuarioLogado">
-        <a asp-area="" asp-controller="Perfil" asp-action="Index"><img src="@ViewBag._UserFoto" alt=""></a>
-        <div class="nomes" asp-area="" asp-controller="Perfil" asp-action="Index">@ViewBag._Username</a>
+        <a asp-area="" asp-controller="Perfil" asp-action="Index"><img src="~/img/Usuarios/@ViewBag._UserFoto" alt=""></a>
+        <div class="nomes">
+            <a class="username" asp-area="" asp-controller="Perfil" asp-action="Index">@ViewBag._Username</a>
             <a class="nome" asp-area="" asp-controller="Perfil" asp-action="Index">@ViewBag._UserNome</a>
         </div>
     </div>
 
     <section class="postar">
         <div class="mostrar">
-            <img src="~/Img/@ViewBag._UserFoto" alt="">
+            <img src="~/img/Usuarios/@ViewBag._UserFoto" alt="">
             <p>Postar</p>
         </div>
         <form method="POST" action='@Url.Action("Postar")'  enctype="multipart/form-data">
@@ -84,7 +52,7 @@
     {
         <div class="post">
             <div class="postador">
-                <a href="#"><img src="~/img/Posts/@item.FotoUsuario" alt=""></a>
+                <a href="#"><img src="~/img/Usuarios/@item.FotoUsuario" alt=""></a>
                 <div class="postador_infos">
                     <a href="#">@item.UsernameUsuario</a>
                     <p class="legenda">@item.Descricao</p>
@@ -99,7 +67,7 @@
             <i class="far fa-comment"></i>
                 <input type="text" placeholder="Comentar...">
             </div>
-            <p class="numero_curtidas">n curtidas</p>
+            <p class="numero_curtidas">algumas curtidas</p>
             <div class="comentarios">
                 <div class="comentario">
                     <a href="#">moco_legal</a>

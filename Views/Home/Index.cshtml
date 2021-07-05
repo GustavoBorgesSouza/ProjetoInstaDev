@@ -1,7 +1,7 @@
 ﻿@{
-    ViewData["Title"] = "Cadastro";
+    ViewData["Title"] = "Login";
 }
-<link rel="stylesheet" href="~/css/estilo.css">
+<link rel="stylesheet" href="~/css/login.css">
 
 
 <div class="titulo_pagina">
@@ -10,32 +10,50 @@
 
 <header></header>
 
-<div class="largura">
-    <section class="box_cadastro">
-        <img class="logo" src="~/assets_/Instadevlgo.png" alt="logo">
-        <span class="span1">Cadastre-se para ver fotos e vídeos dos seus amigos</span>
-        <form method="POST" action='@Url.Action("Cadastrar")'>
-        <input type="text" placeholder="Email" name="Email">
-        <input type="text" placeholder="Nome completo" name="Nome">
-        <input type="text" placeholder="Nome do usuario" name="Username">
-        <input type="text" placeholder="Senha" name="Senha">
-        <button class="botão" type="submit">Cadastre-se</button>
-        </form>
-        <span class="span2">Ao se cadastrar, você concorda com nossos Termos, Politica de dados e Politica de cookies</span>
+<div class="container container2">
+            <div class="box_conteudo">
+                <div class="box_img">
+                    <img class="img_header" src="~/assets_/logo.png" alt="logo">
+                </div>
+                <form method="POST" action='@Url.Action("Logar")'>
+                <div class=" box_inputs margin ">
+                    <input type="text" placeholder="Email" name="Email" required />
+                </div>
+                <div class="box_inputs margin2">
+                    <input type="password" placeholder="Senha" name="Senha" required>
+                </div>
+                <div>
+                    <button class="btn_entrar margin2" type="submit">Entrar</button>
+                </div>
+                </form>
+                <div class="box_linha">
+                    <hr>
+                    <span>ou</span>
+                    <hr>
+                </div>
+                <div class="box_senha">
+                    <a href="">Esqueceu a senha ?</a>
+                </div>
+            </div>
+        </div>
+        <div class="container container3 box_conteudo">
+            <div class="box_cadastrar">
+                <span>não tem uma conta ?<a a asp-area="" asp-controller="Cadastro" asp-action="Index">cadastre-se</a></span>
+            </div>
+        </div>
+        <div class="container box_conteudo box_obtenha">
+            <h4>Obtenha o aplicativo.</h4>
+        </div>
         
-    </section>
-    <section class="box_log">
-        <span class="cad"> Tem uma conta? <a asp-area="" asp-controller="Login" asp-action="Index" class="yey">Conecte-se</a></span>
-    </section>
-    <span class="alio">Obtenha o aplicativo</span>
-    <section class="appleplay">
-        <img class="maca" src="~/assets_/app_store 1.png" alt="apple">
-        <img class="play" src="~/assets_/google_play 1.png" alt="play">
-    </section>
-    </div>
+            <div class="box_imagens">
+                <img class="img1" src="~/assets_/app_store 1.png" alt="apple">
+                <img class="img1" src="~/assets_/google_play 1.png" alt="android">
+            </div>
 
 <footer>
-    @* <span>.</span> *@
+    <span>.</span>
 </footer>
+
+
 
 

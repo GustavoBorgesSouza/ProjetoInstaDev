@@ -9,8 +9,10 @@ namespace ProjetoInstaDev.Models
     {
         public string Descricao { get; set; }
         public string FotoPost { get; set; }
-        public int IdUsuario { get; set; }
+        public string UsernameUsuario { get; set; }
+        public string FotoUsuario{get; set;}
         public int IdPost { get; set; }
+        public bool repetir { get; set;}
 
         private const string CAMINHO = "Database/Post.csv";
 
@@ -21,7 +23,7 @@ namespace ProjetoInstaDev.Models
 
         private string Preparar(Post p)
         {
-            return $"{p.IdPost};{p.FotoPost};{p.Descricao};{p.IdUsuario}";
+            return $"{p.IdPost};{p.FotoPost};{p.Descricao};{p.UsernameUsuario};{FotoUsuario}";
         }
 
         public void CriarPost(Post p)
@@ -43,7 +45,9 @@ namespace ProjetoInstaDev.Models
                 post.IdPost = Int32.Parse(linha[0]);
                 post.FotoPost = linha[1];
                 post.Descricao = linha[2];
-                post.IdUsuario = Int32.Parse(linha[3]);
+                post.UsernameUsuario = linha[3];
+                post.FotoUsuario = linha[4];
+                
 
                 posts.Add(post);
 
@@ -52,7 +56,7 @@ namespace ProjetoInstaDev.Models
             return posts;
 
         }
-        public List<Post> MostrarPost(Usuario u)
+        public List<Post> MostrarPosts(Usuario u)
         {
             List<Post> posts = new List<Post>();
             string[]linhas = File.ReadAllLines(CAMINHO);
@@ -62,12 +66,12 @@ namespace ProjetoInstaDev.Models
                 string[] linha = item.Split(";");
                 Post post = new Post();
 
-                if (post.IdUsuario == u.IdUsuario)
+                if (post.UsernameUsuario == u.Username)
                 {
                     post.IdPost = Int32.Parse(linha[0]);
                     post.FotoPost = linha[1];
-                    post.Descricao = linha[2];
-                    post.IdUsuario = Int32.Parse(linha[3]);
+                    post.UsernameUsuario = linha[3];
+                    post.FotoUsuario = linha[4];
 
                     posts.Add(post);
                 }
@@ -76,6 +80,22 @@ namespace ProjetoInstaDev.Models
 
             return posts;
             
+        }
+
+        public bool VerificandoId(Int32 id){
+            List<string> PostsCsv = LerTodasLinhasCSV("Database/Post.csv");
+            var identificador = PostsCsv.Find(x => Int32.Parse(x.Split(";")[0]) == id);
+
+            if (identificador != null)
+            {
+                repetir = true;
+            }
+            else if (identificador == null)
+            {
+                repetir = false;
+            }
+
+            return repetir;
         }
 
     }

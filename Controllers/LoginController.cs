@@ -5,7 +5,7 @@ using ProjetoInstaDev.Models;
 
 namespace ProjetoInstaDev.Controllers
 {
-    [Route("Login")]
+    [Route("Home")]
     public class LoginController : Controller
     {
         [TempData]
@@ -32,16 +32,17 @@ namespace ProjetoInstaDev.Controllers
 
             if (logado != null)
             {
+                HttpContext.Session.SetString("_UserId" , logado.Split(";")[0]);
                 HttpContext.Session.SetString("_Username", logado.Split(";")[3]);
                 HttpContext.Session.SetString("_UserNome", logado.Split(";")[2]);
                 HttpContext.Session.SetString("_UserFoto", logado.Split(";")[5]);
                 
-                return LocalRedirect("~/Feed");
+                return LocalRedirect("~/Feed/Index");
 
             }
             else
             {
-                return LocalRedirect("~/Login");
+                return LocalRedirect("~/Login/Index");
             }
         }
     }

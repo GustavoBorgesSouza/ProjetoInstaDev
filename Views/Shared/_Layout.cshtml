@@ -4,15 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - ProjetoInstaDev</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/header.css" />
     <link rel="stylesheet" href="~/css/footer.css" />
 </head>
 
 <body>
 
-    @* <header>
+@if (ViewData["Title"].ToString() != "Cadastro" && ViewData["Title"].ToString() != "Login")
+{
+    <header>
         <div class="container container_header">
             <a href="#"><img class="logo" src="~/assets_/Instadev.png" alt=""></a>
 
@@ -26,7 +26,9 @@
                 <a href="#"><img src="~/assets_/thank-you 1.png" alt="."></a>
             </nav>
         </div>
-    </header> *@
+    </header>
+    
+}
 
 
     <div class="container">
@@ -35,7 +37,9 @@
         </main>
     </div>
 
-    @* <footer>
+@if (ViewData["Title"].ToString() != "Cadastro" && ViewData["Title"].ToString() != "Login"){
+
+    <footer>
         <div class="container_footer">
             <nav class="links">
                 <p>Instadev 2021</p>
@@ -53,7 +57,8 @@
                 <a href="https://play.google.com/store"><img src="~/assets_/google_play 1.png" alt=""></a>
             </nav>
         </div>
-    </footer> *@
+    </footer>
+}
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

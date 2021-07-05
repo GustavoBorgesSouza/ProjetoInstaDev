@@ -15,6 +15,7 @@ namespace ProjetoInstaDev.Models
         public string FotoPerfil { get; set; }
 
         public List<Post> PostsUsuario { get; set; }
+        public bool repetir;
 
         private const string CAMINHO = "Database/Usuario.csv";
         
@@ -96,5 +97,23 @@ namespace ProjetoInstaDev.Models
             return usuarios;
 
         }
+
+        public bool VerificandoId(Int32 id){
+            List<string> UsuariosCsv = LerTodasLinhasCSV("Database/Usuario.csv");
+            var identificador = UsuariosCsv.Find(x => Int32.Parse(x.Split(";")[0]) == id);
+
+            if (identificador != null)
+            {
+                repetir = true;
+            }
+            else if (identificador == null)
+            {
+                repetir = false;
+            }
+
+            return repetir;
+        }
+
+        
     }
 }

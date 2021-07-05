@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, main{
+    background-color: #E5E5E5;
+}
+
+.container_main{
+    margin-top: 76px;
+}
+
+.perfis{
+    margin-top: 76px;
+    width: 64%;
+    height: 113px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.perfil{
+    width: 68px;
+    background: transparent;
+}
+
+.perfil img{
+    width: 100%;
+    height: 68px;
+    border-radius: 50%;
+}
+
+.perfil a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+    background: transparent;
+}
+
+.usuarioLogado{
+    z-index: 2;
+    position: fixed;
+    top: 76px;
+    right: 16vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 270px;
+    height: 113px;
+    background-color: transparent;
+}
+
+.usuarioLogado img{
+    height: 86px;
+}
+
+.nomes{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-around;
+    margin-right: 40px;
+}
+
+.username{
+    text-decoration: none;
+    color: black;
+    font-family: 'Segoe UI';
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nome{
+    text-decoration: none;
+    color: #B6B6B6;
+    font-family: 'Segoe UI';
+    font-size: 16px;
+}
+
+.postar{
+    margin: 26px 0 0;
+    background-color: white;
+    width: 64%;
+    height: 154px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 28px 32px;
+}
+
+.mostrar{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mostrar img{
+    background-color: white;
+    height: 42px;
+    margin-right: 16px;
+}
+
+.mostrar p{
+    background-color: white;
+    color: black;
+    font-family: 'Segoe UI';
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.selecao{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.selecao input{
+    margin: 0;
+}
+
+#id_escolherimg{
+    color: #E5E5E5;
+
+}
+
+.label{
+    text-align: center;
+    color: #7D7D7D;
+    background-color: #E5E5E5;
+    border-radius: 5px;
+    width: 180px;
+    height: 26px;
+}
+
+.escolher_img{
+    color: #E5E5E5;
+    border-radius: 5px;
+    width: auto;
+    display: none;
+}
+
+.selecao button{
+    background: #2686CC;
+    border-radius: 5px;
+    border-style: none;
+    width: 140px;
+    height: 26px;
+}
+
+.selecao p{
+    background: transparent;
+    color: white;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.post{
+    margin: 26px 0 0;
+    width: 64%;
+    height: auto;
+    background-color: white;
+    padding: 12px 0;
+}
+
+.postador{
+    display: flex;
+    background-color: transparent;
+    margin-bottom: 16px;
+}
+
+.postador img{
+    background-color: transparent;
+    height: 42px;
+    margin: 0 16px;
+    border-radius: 50%;
+}
+
+.postador_infos a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Segoe UI';
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.legenda{
+    text-decoration: none;
+    color: black;
+    font-family: 'Segoe UI';
+    font-size: 14px; 
+}
+
+.imagem_postada{
+    width: 100%;
+    height: 360px;
+    margin-bottom: 14px;
+}
+
+.interacoes{
+    margin-left: 16px;
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    margin-bottom: 2px;
+}
+
+.interacoes i{
+    font-size: 38px;
+}
+
+.interacoes input{
+    border-style: none;
+    border-bottom: solid;
+    border-bottom-color: #E5E5E5;
+    width: 270px;
+}
+
+.numero_curtidas{
+    margin-left: 16px;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.comentarios{
+    margin-left: 16px;
+    margin-bottom: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.comentario{
+    display: flex;
+    flex-direction: row;
+}
+
+.comentario a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Segoe UI';
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 6px;
+}
+
+.comentario p{
+font-family: 'Segoe UI';
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+margin-bottom: 12px;
+}

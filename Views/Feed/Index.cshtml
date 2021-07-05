@@ -1,0 +1,128 @@
+@{
+    ViewData["Title"] = "Feed";
+}
+
+<link rel="stylesheet" href="~/css/feed.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+
+
+
+<main class="container container_main">
+    <section class="perfis">
+        <div class="perfil">
+            <img src="~/assets_/padraoperfil.png" alt="">
+            <a href="#">
+                Nome_usuario
+            </a>
+        </div>
+        <div class="perfil">
+            <img src="~/assets_/padraoperfil.png" alt="">
+            <a href="#">
+                Nome_usuario
+            </a>
+        </div>
+        <div class="perfil">
+            <img src="~/assets_/padraoperfil.png" alt="">
+            <a href="#">
+                Nome_usuario
+            </a>
+        </div>
+        <div class="perfil">
+            <img src="~/assets_/padraoperfil.png" alt="">
+            <a href="#">
+                Nome_usuario
+            </a>
+        </div>
+        <div class="perfil">
+            <img src="~/assets_/padraoperfil.png" alt="">
+            <a href="#">
+                Nome_usuario
+            </a>
+        </div>
+        <div class="perfil">
+            <img src="~/assets_/padraoperfil.png" alt="">
+            <a href="#">
+                Nome_usuario
+            </a>
+        </div>
+        <div class="perfil">
+            <img src="~/assets_/padraoperfil.png" alt="">
+            <a href="#">
+                Nome_usuario
+            </a>
+        </div>
+    </section>
+
+    <div class="usuarioLogado">
+        <a href="#"><img src="~/Img/@ViewBag._UserFoto" alt=""></a>
+        <div class="nomes">
+            <a class="username" href="#">@ViewBag._Username</a>
+            <a class="nome" href="#">@ViewBag._UserNome</a>
+        </div>
+    </div>
+
+    <section class="postar">
+        <div class="mostrar">
+            <img src="~/Img/@ViewBag._UserFoto" alt="">
+            <p>Postar</p>
+        </div>
+        <form method="POST" action='@Url.Action("Postar")'  enctype="multipart/form-data">
+        <div class="selecao">
+            <input type="text" class="input" placeholder="Digite a descricao da imagem" name="Descricao">
+            <label class="label" for="id_escolherimg">Escolha a imagem</label>
+            <input class="escolher_img" type="file" name="Imagem" id="id_escolherimg">
+            <!-- <label for="id_escolherimg">Escolha a imagem</label> -->
+            <button type="submit">
+                Postar
+            </button>
+        </form>    
+        </div>
+    </section>
+
+    @foreach (var item in ViewBag.Posts)
+    {
+        <div class="post">
+            <div class="postador">
+                <a href="#"><img src="~/img/Posts/@item.FotoUsuario" alt=""></a>
+                <div class="postador_infos">
+                    <a href="#">@item.UsernameUsuario</a>
+                    <p class="legenda">@item.Descricao</p>
+                </div>
+            </div>
+
+            <img class="imagem_postada" src="~/img/Posts/@item.FotoPost" alt="">
+
+            <div class="interacoes">
+                <i id="coracaozinho" class="far fa-heart"></i>
+                <!-- para fazer curtida faz um js chamando esse id e mudando a classe far para fas e adicionando 1 na contadora -->
+            <i class="far fa-comment"></i>
+                <input type="text" placeholder="Comentar...">
+            </div>
+            <p class="numero_curtidas">n curtidas</p>
+            <div class="comentarios">
+                <div class="comentario">
+                    <a href="#">moco_legal</a>
+                    <p>Muito bonita a foto viu o</p>
+                </div>
+                <div class="comentario">
+                    <a href="#">moco_bonito</a>
+                    <p>Muito legal a foto viu o</p>
+                </div>
+                <div class="comentario">
+                    <a href="#">moca_linda</a>
+                    <p>Muito incrivel a foto viu o</p>
+                </div>
+            </div>
+        </div>
+
+    }
+
+
+
+</main>
+
+
+
+</html>

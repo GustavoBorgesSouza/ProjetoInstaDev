@@ -1,0 +1,49 @@
+@{
+    ViewData["Title"] = "Editar perfil";
+}
+
+<link rel="stylesheet" href="~/css/Edicao.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+        <main>
+        <div class="container unificar">
+            <div class="bloco1">
+                <hr class="linha1">
+                <h1 class="distanciar">Editar perfil</h1>
+                <hr class="linha2">
+            </div>
+            <div class="bloco2">
+                @foreach (var item in ViewBag.Usuarios)
+                    {
+                <div class="encapsulamento">
+                    <img src="~/img/Usuarios/@item.FotoPerfil" alt="">
+                    <div>
+                        <h2>@item.Username</h2>
+                        <label class="label" for="id_escolherimg">Alterar foto do perfil</label>
+                    </div>
+                </div>
+                <div class="encapsulamento2">
+                    <h3>Nome</h3>
+                    <input type="text">
+                </div>
+                <p>Ajude as pessoas a descobrir sua conta usando o nome pelo qual você é conhecido: seu nome completo, apelido ou nome comercial.</p>
+                <p>Você pode alterar o seu nome apenas duas vezes a cada 14 dias.</p>
+                <div class="encapsulamento4">
+                    <h3>Nome de usuário</h3>
+                    <input type="text">
+                </div>
+                <p>Na maioria dos casos, você poderá alterar seu nome de usuário novamente para @item.Username por mais 14 dias.</p>
+                }
+                <p>Informações pessoais Forneça suas informações pessoais, mesmo se a conta for usada para uma empresa, um animal de estimação ou outra coisa. Elas não farão parte do seu perfil público.</p>
+                <div class="encapsulamento2">
+                    <h3>Email</h3>
+                    <input type="text">
+                </div>
+                <div class="encapsulamento3">
+                    <button>Enviar</button>
+                    <a href="#">Desativar minha conta definitivamente</a>
+                </div>
+            </div>
+        </div>
+    </main>

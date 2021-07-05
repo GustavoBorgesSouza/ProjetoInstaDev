@@ -7,23 +7,21 @@
     integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 
 
-
-
 <main class="container container_main">
     <section class="perfis">
-    @foreach (var item in ViewBag.Usuarios)
-    {
-        <div class="perfil">
-            <img src="~/img/Usuarios/@item.FotoPerfil" alt="">
-            <a href="#">
-                @item.Username
-            </a>
-        </div>
-    }
+        @foreach (var item in ViewBag.Usuarios)
+        {
+            <div class="perfil">
+                <img src="~/img/Usuarios/@item.FotoPerfil" alt="">
+                <a href="#">
+                    @item.Username
+                </a>
+            </div>
+        }
     </section>
 
     <div class="usuarioLogado">
-        <a asp-area="" asp-controller="Perfil" asp-action="Index"><img src="~/img/Usuarios/@ViewBag._UserFoto" alt=""></a>
+        <a asp-area="" asp-controller="Perfil" asp-action="Index"><img src="~/img/Usuarios/@ViewBag._UserFoto"alt=""></a>
         <div class="nomes">
             <a class="username" asp-area="" asp-controller="Perfil" asp-action="Index">@ViewBag._Username</a>
             <a class="nome" asp-area="" asp-controller="Perfil" asp-action="Index">@ViewBag._UserNome</a>
@@ -35,16 +33,16 @@
             <img src="~/img/Usuarios/@ViewBag._UserFoto" alt="">
             <p>Postar</p>
         </div>
-        <form method="POST" action='@Url.Action("Postar")'  enctype="multipart/form-data">
-        <div class="selecao">
-            <input type="text" class="input" placeholder="Digite a descricao da imagem" name="Descricao">
-            <label class="label" for="id_escolherimg">Escolha a imagem</label>
-            <input class="escolher_img" type="file" name="Imagem" id="id_escolherimg">
-            <!-- <label for="id_escolherimg">Escolha a imagem</label> -->
-            <button type="submit">
-                Postar
-            </button>
-        </form>    
+        <form method="POST" action='@Url.Action("Postar")' enctype="multipart/form-data">
+            <div class="selecao">
+                <input type="text" class="input" placeholder="Digite a descricao da imagem" name="Descricao">
+                <label class="label" for="id_escolherimg">Escolha a imagem</label>
+                <input class="escolher_img" type="file" name="Imagem" id="id_escolherimg">
+                <!-- <label for="id_escolherimg">Escolha a imagem</label> -->
+                <button type="submit">
+                    Postar
+                </button>
+        </form>
         </div>
     </section>
 
@@ -83,13 +81,7 @@
                 </div>
             </div>
         </div>
-
     }
-
-
-
 </main>
-
-
 
 </html>

@@ -27,15 +27,16 @@ namespace ProjetoInstaDev.Controllers
         }
 
         [Route("Postar")]
-        public IActionResult Postar(IFormCollection form){
+        public IActionResult Postar(IFormCollection form)
+        {
             Post novoPost = new Post();
 
-             do
+            do
             {
                 Int32 IdPost = IdAleatorio.Next();
                 repetir = postModel.VerificandoId(IdPost);
 
-            } while(repetir == true);
+            } while (repetir == true);
 
             novoPost.UsernameUsuario = HttpContext.Session.GetString("_Username");
             novoPost.FotoUsuario = HttpContext.Session.GetString("_UserFoto");
@@ -61,7 +62,8 @@ namespace ProjetoInstaDev.Controllers
 
                 novoPost.FotoPost = file.FileName; //recebe o nome do arquivo
 
-            } else
+            }
+            else
             {
                 novoPost.FotoPost = "padrao.png"; //padrao.png é uma img padrao que ficará salva para quem não colocar nenhuma imagem
             }
@@ -74,11 +76,11 @@ namespace ProjetoInstaDev.Controllers
 
         }
 
-        
 
-        
-        
 
-        
+
+
+
+
     }
 }

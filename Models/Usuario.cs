@@ -21,7 +21,6 @@ namespace ProjetoInstaDev.Models
         
         public Usuario(){
             CriarPastaEArquivo(CAMINHO);
-
         }
 
         private string Preparar(Usuario u){

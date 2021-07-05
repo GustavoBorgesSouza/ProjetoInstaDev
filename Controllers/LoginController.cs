@@ -13,6 +13,7 @@ namespace ProjetoInstaDev.Controllers
 
         Usuario usuarioModel = new Usuario();
 
+        [Route("Index")]
         public IActionResult Index()
         {
             return View();

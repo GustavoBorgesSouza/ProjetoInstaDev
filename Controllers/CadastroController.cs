@@ -5,7 +5,7 @@ using ProjetoInstaDev.Models;
 
 namespace ProjetoInstaDev.Controllers
 {
-    [Route("Cadastro")]
+    [Route("Home")]
     public class CadastroController : Controller
     {
         Usuario usuarioModel = new Usuario();
@@ -30,7 +30,7 @@ namespace ProjetoInstaDev.Controllers
 
             ViewBag.usuarios = usuarioModel.LerTodos();
 
-            return LocalRedirect("~/");
+            return LocalRedirect("~/Feed");
         }
     }
 }

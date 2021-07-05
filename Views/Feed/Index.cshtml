@@ -56,10 +56,9 @@
     </section>
 
     <div class="usuarioLogado">
-        <a href="#"><img src="~/Img/@ViewBag._UserFoto" alt=""></a>
-        <div class="nomes">
-            <a class="username" href="#">@ViewBag._Username</a>
-            <a class="nome" href="#">@ViewBag._UserNome</a>
+        <a asp-area="" asp-controller="Perfil" asp-action="Index"><img src="@ViewBag._UserFoto" alt=""></a>
+        <div class="nomes" asp-area="" asp-controller="Perfil" asp-action="Index">@ViewBag._Username</a>
+            <a class="nome" asp-area="" asp-controller="Perfil" asp-action="Index">@ViewBag._UserNome</a>
         </div>
     </div>
 

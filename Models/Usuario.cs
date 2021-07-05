@@ -48,6 +48,29 @@ namespace ProjetoInstaDev.Models
             ReescreverCSV(CAMINHO, linhas);
         }
 
+        public List<Usuario> LerTodos()
+        {
+            List<Usuario> usuarios = new List<Usuario>();
+            string[] linhas = File.ReadAllLines(CAMINHO);
+
+            foreach (var item in linhas)
+            {
+                string[] linha = item.Split(";");
+                Usuario usuario = new Usuario();
+
+                usuario.IdUsuario = Int32.Parse(linha[0]);
+                usuario.Email = linha[1];
+                usuario.Nome = linha[2];
+                usuario.Username = linha[3];
+                usuario.Senha = linha[4];
+                usuario.FotoPerfil = linha[5];
+
+                usuarios.Add(usuario);
+            }
+
+            return usuarios;
+
+        }
         public List<Usuario> LerUsuarios()
         {
             List<Usuario> usuarios = new List<Usuario>();

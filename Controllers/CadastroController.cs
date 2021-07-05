@@ -10,9 +10,10 @@ namespace ProjetoInstaDev.Controllers
     {
         Usuario usuarioModel = new Usuario();
 
+        [Route("Index")]
         public IActionResult Index()
         {
-            ViewBag.usuarios = usuarioModel.LerUsuarios();
+            // ViewBag.usuarios = usuarioModel.LerUsuarios();
             return View();
         }
 
@@ -27,9 +28,9 @@ namespace ProjetoInstaDev.Controllers
 
             usuarioModel.Cadastrar(novoUsuario);
 
-            ViewBag.usuarios = usuarioModel.LerUsuarios();
+            ViewBag.usuarios = usuarioModel.LerTodos();
 
-            return LocalRedirect("~/Login");
+            return LocalRedirect("~/");
         }
     }
 }

@@ -1,11 +1,41 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Cadastro";
 }
-@* <header></header> *@
+<link rel="stylesheet" href="~/css/estilo.css">
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <a asp-area="" asp-controller="Login" asp-action="Logar">Logar</a>
-    <a asp-area="" asp-controller="Cadastro" asp-action="Cadastrar">Cadastrar</a>
+
+<div class="titulo_pagina">
+    <h1>@ViewData["Title"]</h1>
 </div>
+
+<header></header>
+
+<div class="largura">
+    <section class="box_cadastro">
+        <img class="logo" src="../../wwwroot/assets_/Instadevlgo.png" alt="logo">
+        <span class="span1">Cadastre-se para ver fotos e vídeos dos seus amigos</span>
+        <form method="POST" action='@Url.Action("Cadastrar")'>
+        <input type="text" placeholder="Email" name="Email">
+        <input type="text" placeholder="Nome completo" name="Nome">
+        <input type="text" placeholder="Nome do usuario" name="Username">
+        <input type="text" placeholder="Senha" name="Senha">
+        <button class="botão" type="submit">Cadastre-se</button>
+        </form>
+        <span class="span2">Ao se cadastrar, você concorda com nossos Termos, Politica de dados e Politica de cookies</span>
+        
+    </section>
+    <section class="box_log">
+        <span class="cad"> Tem uma conta? <a href="#" class="yey">Conecte-se</a></span>
+    </section>
+    <span class="alio">Obtenha o aplicativo</span>
+    <section class="appleplay">
+        <img class="maca" src="../../wwwroot/assets_/app_store 1.png" alt="apple">
+        <img class="play" src="../../wwwroot/assets_/google_play 1.png" alt="play">
+    </section>
+    </div>
+
+<footer>
+    <span>.</span>
+</footer>
+
+

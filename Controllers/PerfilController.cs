@@ -16,8 +16,10 @@ namespace ProjetoInstaDev.Controllers
         [Route("Index")]
         public IActionResult Index()
         {
-            ViewBag.Posts = postModel.MostrarPosts();
-            ViewBag.Usuarios = usuarioModel.LerTodos();
+            ViewBag._Username = HttpContext.Session.GetString("_Username");
+            ViewBag._UserNome = HttpContext.Session.GetString("_UserNome");
+            ViewBag._UserFoto = HttpContext.Session.GetString("_UserFoto");
+            ViewBag.Posts = postModel.MostrarPosts(ViewBag._UserName);
             return View();
         }
     }

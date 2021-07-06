@@ -9,13 +9,14 @@
 </head>
 
 <section>
-    <div class="container inicio_perfil">
-        <div class="posicionamento_fotoperfil">
+        <div class="container inicio_perfil">
+            <div class="posicionamento_fotoperfil">
+            
+               <a a asp-area="" asp-controller="EdicaoPefil" asp-action="Alterar" class="fotoperfil"><img src="~/img/Usuarios/@ViewBag._UserFoto" alt=""></a>
+            
+                <div class="conteudo">
 
-            <a a asp-area="" asp-controller="EdicaoPefil" asp-action="Alterar" class="fotoperfil"><img src="~/img/Usuarios/@ViewBag.Perfil.FotoPerfil" alt=""></a>
-
-            <div class="conteudo">
-                <h1>@ViewBag.Usuarios.UserName</h1>
+                <h1>@ViewBag._Username</h1>
 
                 <div class="texto_conteudo">
                     <p>0 publicações</p>
@@ -24,7 +25,7 @@
                 </div>
 
                 <div class="desloga">
-                    <h2>Marcos Jeeves</h2>
+                    <h2>@ViewBag._UserNome</h2>
                     <a a asp-area="" asp-controller="EditarPefil" asp-action="Index">Editar Perfil</a>
                     <a a asp-area="" asp-controller="Login" asp-action="Logout">Sair</a>
                 </div>
@@ -34,73 +35,72 @@
 
     <div class="container publicacoes">
         <div class="conteudo_publicacoes">
-            <img class="icone_publicacoes" src="../../wwwroot/assets_/icone_publicacoes.png" alt="">
+            <img class="icone_publicacoes" src="~/wwwroot/assets_/icone_publicacoes.png" alt="">
             <p>publicações</p>
         </div>
     </div>
 </section>
 
 <section>
-    <div class="container post">
-        @foreach (Post post in ViewBag.Posts)
-        {
-        <a><img src="~/img/Usuarios/@post.FotoPost" alt="foto post"></a>
-        }
+    @foreach (var item in ViewBag.Posts)
+    {
+        <div class="container post">
+            <a><img src="~/img/Posts/@item.FotoPost" alt="foto post"></a>
+      
     
-        <div class="complemento_post">
-            <div class="usuario">
-                <a href="#"><img src="~/img/Usuarios/@ViewBag.Perfil.FotoPerfil" alt=""></a>
-
-                <div class="usuario_post">
-                    <h3>@ViewBag.Perfil.Nome</h3>
-                    @foreach (Post post in ViewBag.Posts)
-                    {
-                    <span class="local">@post.Descricao</span>
-                    }
+            <div class="complemento_post">
+                <div class="usuario">
+                   <a href="#"><img src="~/img/Usuarios/@item.FotoUsuario" alt=""></a>
+                
+                    <div class="usuario_post">
+                        <h3>@item.UsernameUsuario</h3>   
+                    
+                        <span class="local">@item.Descricao</span>
+                    </div>
                 </div>
             </div>
-        </div>
         
-        <div class="icones">
-            <div class="curtida_comentario">
-                <a href="#"><img src="../../wwwroot/assets_/Vector (1).png" alt="curtida"></a>
-                <i class="far fa-comment"></i>
+            <div class="icones">
+                <div class="curtida_comentario">
+                    <a href="#"><img src="~/wwwroot/assets_/Vector (1).png" alt="curtida"></a>
+                    <i class="far fa-comment"></i>
+                </div>
+                <p>1954 curtidas</p>
             </div>
-            <p>1954 curtidas</p>
-        </div>
 
-        <div class="comentario">
-            <div class="user_comentario">
-                <span class="user">fausto_silva</span>
-                <span class="texto_comentario">Esse cara é fera bixo!!!</span>
+            <div class="comentario">
+                <div class="user_comentario">
+                    <span class="user">fausto_silva</span>
+                    <span class="texto_comentario">Esse cara é fera bixo!!!</span>
+                </div>
+                <a href="#"><img src="~/wwwroot/assets_/coracao_pequeno.png" alt=""></a>
             </div>
-            <a href="#"><img src="../../wwwroot/assets_/coracao_pequeno.png" alt=""></i></a>
-        </div>
 
-        <div class="comentario">
-            <div class="user_comentario">
-                <span class="user">yes_baby</span>
-                <span class="texto_comentario">thank you</span>
+            <div class="comentario">
+                <div class="user_comentario">
+                    <span class="user">yes_baby</span>
+                    <span class="texto_comentario">thank you</span>
+                </div>
+                <a href="#"><img src="~/wwwroot/assets_/coracao_pequeno.png" alt=""></a>
             </div>
-            <a href="#"><img src="../../wwwroot/assets_/coracao_pequeno.png" alt=""></i></a>
-        </div>
 
-        <div class="comentario">
-            <div class="user_comentario">
-                <span class="user">adriano_stark</span>
-                <span class="texto_comentario">Quando eu adormecer, vou sonhar com você. É sempre você.</span>
+            <div class="comentario">
+                <div class="user_comentario">
+                    <span class="user">adriano_stark</span>
+                    <span class="texto_comentario">Quando eu adormecer, vou sonhar com você. É sempre você.</span>
+                </div>
+                <a href="#"><img src="~/wwwroot/assets_/coracao_pequeno.png" alt=""></a>
             </div>
-            <a href="#"><img src="../../wwwroot/assets_/coracao_pequeno.png" alt=""></i></a>
-        </div>
 
-        <div class="comentario">
-            <div class="user_comentario">
-                <span class="user">yes_baby</span>
+            <div class="comentario">
+                   <div class="user_comentario">
+                   <span class="user">yes_baby</span>
                 <span class="texto_comentario">Yes baby!!</span>
+                </div>
+                <a href="#"><img src="~/wwwroot/assets_/coracao_pequeno.png" alt=""></a>
             </div>
-            <a href="#"><img src="../../wwwroot/assets_/coracao_pequeno.png" alt=""></a>
-        </div>
 
-        <a class="todos_comentarios" href="#">Ver todos os 585 comentários</a>
-    </div>
+           <a class="todos_comentarios" href="#">Ver todos os 585 comentários</a>
+        </div>
+    }
 </section>

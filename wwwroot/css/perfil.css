@@ -86,6 +86,36 @@ h2{
     margin-top: 1px;
 }
 
+.container_post{
+    margin-bottom: 6%;
+}
+
+.posicionamento{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.organizacao_post{
+    display: flex;
+    justify-content: center;
+}
+
+.fotopost{
+    width: 430px;
+    height: 404px;
+}
+
+.foto_usuario{
+    width: 65px;
+    height: 65px;
+}
+
+.coracao_pequeno{
+    width: 15px;
+    height: 15px;
+}
+
 .publicacoes{
     height: 87px;
     width: 68vw;
@@ -110,12 +140,6 @@ h2{
 
 .conteudo_publicacoes p{
     letter-spacing: 0.05em;
-}
-
-.post{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
 }
 
 .complemento_post{
@@ -169,7 +193,7 @@ h3{
     display: flex;
     width: 414px;
     justify-content: space-between;
-    margin-top: -4%;  /*desculpa por tamanha atrocidade mas foi preciso*/
+    margin-top: -4%;  /* desculpa por tamanha atrocidade mas foi preciso */
 }
 
 .user{
@@ -195,11 +219,4 @@ h3{
 .user_comentario{
     display: flex;
     width: 364px;
-} 
-
-.sem_publi{
-    text-align: center;
-    font-family: Roboto, sans-serif;
-    font-weight: 500;
-    font-size: 30px;
 }

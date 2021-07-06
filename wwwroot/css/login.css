@@ -1,25 +1,37 @@
+body {
+    background-color: #FAFAFA;
+    height: 720px;
+}
+header {
+    background-color: aqua;
+}
+.distanciar{
+    margin-top: 30px;
+}
 
 .container {
     width: 1200px;
     margin: 0 auto;
 }
 
-.container2{
-    /* background-color: fuchsia; */
-    width: 380px;
-    height:342px ;
-    border: 2px solid #F1F1F1
+.container_espacar {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-.container3{
-    /* background-color: green; */
-    width: 380px;
-    height: 65px;
-    margin-top: 15px;
-    border: 2px solid #F1F1F1
+.container2 {
+    background-color: #fafafa;
+    width: 1200px;
+    margin: 0 auto;
 }
 
 .box_conteudo{
+    width: 342px;
+    height: 400px;
+    background-color: #FFFFFF;
+    border: 1px solid #F1F1F1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,91 +47,136 @@
 }
 
 .margin{
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 .margin2{
     margin-top: 15px;
 }
 
-.box_inputs {
-    display : flex;
-    flex-direction: column;
-    width: 267px;
-    height: 30px;
-    border: none;
+.box_form {
+    height: 126px;
 }
 
-.box_inputs  input {
-    background: #FAFAFA;
-    height: 30px;
+input {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 267px;
+    height: 35px;
+    background-color: #FAFAFA;
+    border: 1px solid;
+    box-sizing: border-box;
+    border-radius: 2px;
+    border-color: #DCDCDC;
+    padding-left: 12px;
+    margin-top: 9px;
 }
 
-.btn_entrar {
+button {
     width: 267px;
     height: 30px;
-    background-color: #001F70 ;
+    background-color: #2686CC;
+    border-radius: 2px;;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     font-size: 12px ;
     padding: 5px  65px ;
     border: none;
     border-radius: 3px;
+    margin-top: 15px;
+}
+
+hr {
+    width: 109px;
+    color: #CBCBCB;
+    margin-left: 50px;
 }
 
 .box_linha{
+    width: 266px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 25px;
+    /* margin-top: 20px; */
 }
 
 .box_linha hr{
-    width: 88px;
-    margin: 0 30px;
-
+    /* width: 88px; */
+    margin: 0 0px;
 }
 
 .box_linha span{
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: #909090;
+    padding-bottom: 5px;
 }
 
 .box_senha{
-    margin-top: 25px;
-    
+    margin-bottom: 20px;
 }
 
-.box_senha a{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.box_senha a {
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
     font-size: 17px;
+    line-height: 16px;
     text-decoration: none;
+    color: #2686CC;
+}
+
+.box_conteudo2{
+    width: 342px;
+    height: 75px;
+    background-color: #FFFFFF;
+    border: 1px solid #F1F1F1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between
 }
 
 .box_cadastrar{
-    margin-top: 35px;
+    width: 178px;
+    margin-top: 27px;
 }
 
 .box_cadastrar span{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
 }
 
 .box_cadastrar a{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #2686CC;
 }
 
 .box_obtenha{
+    display: flex;
+    justify-content: center;
     margin-top: 18px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .box_imagens{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    width: 271px;
+    height: 39px;
+    margin-top: 20px;
 }
 
 .img1{
-    width: 180px;
+    width: 132px;
 }

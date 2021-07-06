@@ -23,22 +23,31 @@
      margin: 0 auto;
  }
 
- input{
+input{
      width: 267px;
      height: 35px;
+     box-sizing: border-box;
+     border-radius: 2px;
      margin-top: 9px;
      color: #909090;
      background-color: #fafafa;
      border: 1px solid #DCDCDC;
-
+     margin-left: 37px;
+     padding-left: 10px;
  }
 
 .span1{
     margin-top: 10px;
     margin-left: 66px;
     margin-right: 67px;
-    font-size: 14px;
-    text-align: center;
+    font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 19px;
+text-align: center;
+
+color: #909090;
 }
 
 .span2{
@@ -46,8 +55,15 @@
     margin-bottom: 46px;
     width: 267px;
     font-size: 12px;
-    text-align: center;
-    
+    font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 19px;
+text-align: center;
+
+color: #909090;
+
 }
 
 .cadastro{
@@ -61,8 +77,12 @@
 .botão{
     color: #ffff;
     background-color: #2686cc;
+    border-style: solid;
+    border-color: #2686cc;
+border-radius: 2px;
     margin-top: 17px;
     padding: 8px 100px;
+    margin-left: 37px;
 }
 
 .box_log{
@@ -74,13 +94,18 @@
     align-items: center;
     margin: 0 auto;
     margin-top: 9px;
-    
+
 }
 
 .cad{
     color: #353535;
     margin-top: 30px;
-    font-size: 12px;
+    font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 19px;
+text-align: center;
 }
 
 body{
@@ -94,7 +119,7 @@ body{
 
 .alio{
     background-color: transparent;
-    width: 113px;
+    width: 150px;
     height: 16px;
     display: flex;
     flex-direction: column;
@@ -102,6 +127,13 @@ body{
     font-size: 12px;
     color: #353535;
     margin-top: 28px;
+    font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 19px;
+text-align: center;
+
 }
 
 .appleplay{
@@ -109,7 +141,7 @@ body{
     flex-direction: row;
     margin: 0 auto;
     margin-top: 29px;
-    
+
 }
 
 .maca{
@@ -122,14 +154,14 @@ body{
 .play{
     width: 133px;
     height: 39px;
-    
+
 }
 
 .largura{
     width: 342px;
+    height: 550px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: auto;
 }
-

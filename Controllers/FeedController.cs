@@ -29,6 +29,19 @@ namespace ProjetoInstaDev.Controllers
             return View();
         }
 
+        [Route("MostrarTudo")]
+        public IActionResult Mostrar(){
+            ViewBag._Username = HttpContext.Session.GetString("_Username");
+            ViewBag._UserNome = HttpContext.Session.GetString("_UserNome");
+            ViewBag._UserFoto = HttpContext.Session.GetString("_UserFoto");
+            List<Post> lista = postModel.MostrarPosts();
+            lista.Reverse();
+            ViewBag.Posts = lista;
+            ViewBag.Usuarios = usuarioModel.LerTodos();
+
+            return LocalRedirect("~/Feed/Index");
+        }
+
         [Route("Postar")]
         public IActionResult Postar(IFormCollection form){
             Post novoPost = new Post();
@@ -73,7 +86,7 @@ namespace ProjetoInstaDev.Controllers
 
             ViewBag.Posts = postModel.MostrarPosts();
 
-            return LocalRedirect("~/Feed/Index");
+            return LocalRedirect("~/Feed/MostrarTudo");
 
         }
 

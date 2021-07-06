@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 .container{
@@ -14,11 +15,11 @@ header{
     height: 54px;
     position: fixed;
     top: 0;
-    z-index: -2;
+    z-index: 2;
     display: flex;
     align-items: center;
     background-color: white;
-    border-bottom-style: groove;
+    border-style: none;
 
 }
 
@@ -28,20 +29,22 @@ header{
     justify-content: space-between;
     align-items: center;
     height: 46px;
-    /* background-color: rebeccapurple; */
+    background-color: white;
 }
 
 .logo{
     width: 90px;
+    background-color: white;
 }
 
-.pesquisar{
+.input{
     text-align: center;
     border-radius: 10px;
     border-style: solid;
     height: 26px;
     width: 215px;
     margin-left: 54px;
+    background-color: white;
 }
 
 .menu_header{
@@ -51,13 +54,16 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    background-color: white;
 }
 
 .menu_header a{
     font-size: 28px;
     color: rgb(34, 34, 34);
+    background-color: white;
 }
 
 .menu_header img{
     height: 28px;
+    background-color: white;
 }

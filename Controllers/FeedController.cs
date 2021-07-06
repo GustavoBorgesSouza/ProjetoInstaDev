@@ -1,4 +1,4 @@
-using System;
+sing System;
 using System.IO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -72,6 +72,13 @@ namespace ProjetoInstaDev.Controllers
 
             return LocalRedirect("~/Feed/Index");
 
-        }        
+        }
+
+        
+
+        
+        
+
+        
     }
 }

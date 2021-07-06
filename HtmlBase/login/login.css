@@ -1,0 +1,125 @@
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.container2{
+    /* background-color: fuchsia; */
+    width: 380px;
+    height:342px ;
+    border: 2px solid #F1F1F1
+}
+
+.container3{
+    /* background-color: green; */
+    width: 380px;
+    height: 65px;
+    margin-top: 15px;
+    border: 2px solid #F1F1F1
+}
+
+.box_conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between
+}
+
+.box_img{
+    margin-top: 25px;
+}
+
+.img_header{
+    width: 200px;
+}
+
+.margin{
+    margin-top: 30px;
+}
+
+.margin2{
+    margin-top: 15px;
+}
+
+.box_inputs {
+    display : flex;
+    flex-direction: column;
+    width: 267px;
+    height: 30px;
+    border: none;
+}
+
+.box_inputs  input {
+    background: #FAFAFA;
+    height: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn_entrar {
+    width: 267px;
+    height: 30px;
+    background-color: #001F70 ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 12px ;
+    padding: 5px  65px ;
+    border: none;
+    border-radius: 3px;
+}
+
+.box_linha{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.box_linha hr{
+    width: 88px;
+    margin: 0 30px;
+
+}
+
+.box_linha span{
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.box_senha{
+    margin-top: 25px;
+    
+}
+
+.box_senha a{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.box_cadastrar{
+    margin-top: 35px;
+}
+
+.box_cadastrar span{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.box_cadastrar a{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+.box_obtenha{
+    margin-top: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.box_imagens{
+    display: flex;
+    justify-content: center;
+}
+
+.img1{
+    width: 180px;
+}

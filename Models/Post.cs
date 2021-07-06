@@ -10,9 +10,9 @@ namespace ProjetoInstaDev.Models
         public string Descricao { get; set; }
         public string FotoPost { get; set; }
         public string UsernameUsuario { get; set; }
-        public string FotoUsuario { get; set; }
+        public string FotoUsuario{get; set;}
         public int IdPost { get; set; }
-        public bool repetir { get; set; }
+        public bool repetir { get; set;}
 
         private const string CAMINHO = "Database/Post.csv";
 
@@ -47,7 +47,7 @@ namespace ProjetoInstaDev.Models
                 post.Descricao = linha[2];
                 post.UsernameUsuario = linha[3];
                 post.FotoUsuario = linha[4];
-
+                
 
                 posts.Add(post);
 
@@ -59,7 +59,7 @@ namespace ProjetoInstaDev.Models
         public List<Post> MostrarPosts(Usuario u)
         {
             List<Post> posts = new List<Post>();
-            string[] linhas = File.ReadAllLines(CAMINHO);
+            string[]linhas = File.ReadAllLines(CAMINHO);
 
             foreach (var item in linhas)
             {
@@ -76,15 +76,14 @@ namespace ProjetoInstaDev.Models
 
                     posts.Add(post);
                 }
-
+                
             }
 
             return posts;
-
+            
         }
 
-        public bool VerificandoId(Int32 id)
-        {
+        public bool VerificandoId(Int32 id){
             List<string> PostsCsv = LerTodasLinhasCSV("Database/Post.csv");
             var identificador = PostsCsv.Find(x => Int32.Parse(x.Split(";")[0]) == id);
 

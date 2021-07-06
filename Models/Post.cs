@@ -23,7 +23,7 @@ namespace ProjetoInstaDev.Models
 
         private string Preparar(Post p)
         {
-            return $"{p.IdPost};{p.FotoPost};{p.Descricao};{p.UsernameUsuario};{FotoUsuario}";
+            return $"{p.IdPost};{p.FotoPost};{p.Descricao};{p.UsernameUsuario};{p.FotoUsuario}";
         }
 
         public void CriarPost(Post p)
@@ -52,6 +52,7 @@ namespace ProjetoInstaDev.Models
                 posts.Add(post);
 
             }
+           
 
             return posts;
 

@@ -4,17 +4,15 @@
 }
 <link rel="stylesheet" href="~/css/perfil.css">
 
-<div class="titulo_pagina">
-    <h8>@ViewData["Title"]</h8>
-</div>
-
-<header></header>
+<head>
+    <title>Perfil</title>
+</head>
 
 <section>
     <div class="container inicio_perfil">
         <div class="posicionamento_fotoperfil">
 
-            <a class="fotoperfil" a asp-area="" asp-controller="EdicaoPefil" asp-action="Alterar"><img src="~/img/Usuarios/@ViewBag.Usuarios.FotoPerfil" alt=""></a>
+            <a a asp-area="" asp-controller="EdicaoPefil" asp-action="Alterar" class="fotoperfil"><img src="~/img/Usuarios/@ViewBag.Perfil.FotoPerfil" alt=""></a>
 
             <div class="conteudo">
                 <h1>@ViewBag.Usuarios.UserName</h1>
@@ -51,10 +49,10 @@
     
         <div class="complemento_post">
             <div class="usuario">
-                <a href="#"><img src="~/img/Usuarios/@ViewBag.Usuarios.FotoPerfil" alt=""></a>
+                <a href="#"><img src="~/img/Usuarios/@ViewBag.Perfil.FotoPerfil" alt=""></a>
 
                 <div class="usuario_post">
-                    <h3>@ViewBag.Usuarios.Nome</h3>
+                    <h3>@ViewBag.Perfil.Nome</h3>
                     @foreach (Post post in ViewBag.Posts)
                     {
                     <span class="local">@post.Descricao</span>

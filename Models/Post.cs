@@ -57,7 +57,7 @@ namespace ProjetoInstaDev.Models
             return posts;
 
         }
-        public List<Post> MostrarPosts(string UserName)
+        public List<Post> MostrarPosts(string UnRecebido)
         {
             List<Post> posts = new List<Post>();
             string[]linhas = File.ReadAllLines(CAMINHO);
@@ -67,7 +67,7 @@ namespace ProjetoInstaDev.Models
                 string[] linha = item.Split(";");
                 Post post = new Post();
 
-                if (post.UsernameUsuario == UserName)
+                if (post.UsernameUsuario == UnRecebido)
                 {
                     post.IdPost = Int32.Parse(linha[0]);
                     post.FotoPost = linha[1];

@@ -3,18 +3,21 @@
     ViewData["Title"] = "Perfil";
 }
 <link rel="stylesheet" href="~/css/perfil.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 
 <head>
     <title>Perfil</title>
 </head>
 
 <section>
-        <div class="container inicio_perfil">
-            <div class="posicionamento_fotoperfil">
-            
-               <a a asp-area="" asp-controller="EdicaoPefil" asp-action="Alterar" class="fotoperfil"><img src="~/img/Usuarios/@ViewBag._UserFoto" alt=""></a>
-            
-                <div class="conteudo">
+    <div class="container inicio_perfil">
+        <div class="posicionamento_fotoperfil">
+
+            <a a asp-area="" asp-controller="EdicaoPefil" asp-action="Alterar"><img class="foto_perfil"
+                    src="~/Img/Usuarios/@ViewBag._UserFoto" alt=""></a>
+
+            <div class="conteudo">
 
                 <h1>@ViewBag._Username</h1>
 
@@ -35,7 +38,7 @@
 
     <div class="container publicacoes">
         <div class="conteudo_publicacoes">
-            <img class="icone_publicacoes" src="~/wwwroot/assets_/icone_publicacoes.png" alt="">
+            <img class="icone_publicacoes" src="~/assets_/icone_publicacoes.png" alt="" width="16px">
             <p>publicações</p>
         </div>
     </div>
@@ -45,62 +48,68 @@
     @foreach (var item in ViewBag.Posts)
     {
         <div class="container post">
-            <a><img src="~/img/Posts/@item.FotoPost" alt="foto post"></a>
-      
-    
-            <div class="complemento_post">
-                <div class="usuario">
-                   <a href="#"><img src="~/img/Usuarios/@item.FotoUsuario" alt=""></a>
-                
-                    <div class="usuario_post">
-                        <h3>@item.UsernameUsuario</h3>   
-                    
-                        <span class="local">@item.Descricao</span>
+            @if (ViewBag.Posts != null)
+            {
+                <img src="~/Img/Posts/@item.FotoPost" alt="foto post" width="430px">
+
+                <div class="complemento_post">
+                    <div class="usuario">
+                        <img src="~/Img/Usuarios/@item.FotoUsuario" alt="" width="65px">
+
+                        <div class="usuario_post">
+                            <h3>@item.UsernameUsuario</h3>
+                            <span class="local">@item.Descricao</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        
-            <div class="icones">
-                <div class="curtida_comentario">
-                    <a href="#"><img src="~/wwwroot/assets_/Vector (1).png" alt="curtida"></a>
-                    <i class="far fa-comment"></i>
-                </div>
-                <p>1954 curtidas</p>
-            </div>
 
-            <div class="comentario">
-                <div class="user_comentario">
-                    <span class="user">fausto_silva</span>
-                    <span class="texto_comentario">Esse cara é fera bixo!!!</span>
+                <div class="icones">
+                    <div class="curtida_comentario">
+                        <img src="~/assets_/Vector (1).png" alt="curtida" width="23px">
+                        <i class="far fa-comment"></i>
+                    </div>
+                    <p>1954 curtidas</p>
                 </div>
-                <a href="#"><img src="~/wwwroot/assets_/coracao_pequeno.png" alt=""></a>
-            </div>
 
-            <div class="comentario">
-                <div class="user_comentario">
-                    <span class="user">yes_baby</span>
-                    <span class="texto_comentario">thank you</span>
+                <div class="comentario">
+                    <div class="user_comentario">
+                        <span class="user">fausto_silva</span>
+                        <span class="texto_comentario">Esse cara é fera bixo!!!</span>
+                    </div>
+                    <img src="~/assets_/coracao_pequeno.png" alt="" width="15px">
                 </div>
-                <a href="#"><img src="~/wwwroot/assets_/coracao_pequeno.png" alt=""></a>
-            </div>
 
-            <div class="comentario">
-                <div class="user_comentario">
-                    <span class="user">adriano_stark</span>
-                    <span class="texto_comentario">Quando eu adormecer, vou sonhar com você. É sempre você.</span>
+                <div class="comentario">
+                    <div class="user_comentario">
+                        <span class="user">yes_baby</span>
+                        <span class="texto_comentario">thank you</span>
+                    </div>
+                    <img src="~/assets_/coracao_pequeno.png" alt="" width="15px">
                 </div>
-                <a href="#"><img src="~/wwwroot/assets_/coracao_pequeno.png" alt=""></a>
-            </div>
 
-            <div class="comentario">
-                   <div class="user_comentario">
-                   <span class="user">yes_baby</span>
-                <span class="texto_comentario">Yes baby!!</span>
+                <div class="comentario">
+                    <div class="user_comentario">
+                        <span class="user">adriano_stark</span>
+                        <span class="texto_comentario">Quando eu adormecer, vou sonhar com você. É sempre você.</span>
+                    </div>
+                    <img src="~/assets_/coracao_pequeno.png" alt="" width="15px">
                 </div>
-                <a href="#"><img src="~/wwwroot/assets_/coracao_pequeno.png" alt=""></a>
-            </div>
 
-           <a class="todos_comentarios" href="#">Ver todos os 585 comentários</a>
+                <div class="comentario">
+                    <div class="user_comentario">
+                        <span class="user">yes_baby</span>
+                        <span class="texto_comentario">Yes baby!!</span>
+                    </div>
+                    <img src="~/assets_/coracao_pequeno.png" alt="" width="15px">
+                </div>
+
+                <a class="todos_comentarios" href="#">Ver todos os 585 comentários</a>
+            }
+
+            else
+            {
+                <span class="sem_publi">Ainda não há publicações</span>
+            }
         </div>
     }
 </section>

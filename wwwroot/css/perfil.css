@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 .container{
@@ -15,6 +14,12 @@
 main{
     background: #fafafa;
     margin-top: 2%;
+}
+
+.foto_perfil{
+    width: 152px;
+    height: 152px;
+    border-radius: 50%;
 }
 
 .inicio_perfil{
@@ -191,3 +196,10 @@ h3{
     display: flex;
     width: 364px;
 } 
+
+.sem_publi{
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+}

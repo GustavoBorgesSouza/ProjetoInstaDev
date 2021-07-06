@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -20,7 +21,9 @@ namespace ProjetoInstaDev.Controllers
             ViewBag._Username = HttpContext.Session.GetString("_Username");
             ViewBag._UserNome = HttpContext.Session.GetString("_UserNome");
             ViewBag._UserFoto = HttpContext.Session.GetString("_UserFoto");
-            ViewBag.Posts = postModel.MostrarPosts();
+            List<Post> lista = postModel.MostrarPosts();
+            lista.Reverse();
+            ViewBag.Posts = lista;
             ViewBag.Usuarios = usuarioModel.LerTodos();
 
             return View();

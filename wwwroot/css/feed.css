@@ -195,6 +195,7 @@ form{
 .postador img{
     background-color: transparent;
     height: 42px;
+    width: 42px;
     margin: 0 16px;
     border-radius: 50%;
 }

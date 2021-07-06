@@ -1,0 +1,50 @@
+@{
+    ViewData["Title"] = "Edicao";
+}
+
+<link rel="stylesheet" href="~/css/Edicao.css">
+
+<main>
+    <div class="container unificar">
+        <div class="bloco1">
+            <hr class="linha1">
+            <h1 class="distanciar">Editar perfil</h1>
+            <hr class="linha2">
+        </div>
+        <div class="bloco2">
+            <form method="POST" action='@Url.Action("Editar")'>
+                <div class="encapsulamento">
+                    <img class="fotoPerfil" src="~/img/Usuarios/@ViewBag._UserFoto" alt="">
+                    <div>
+                        <h2>@ViewBag._Username</h2>
+                        <input type="file" name="Imagem" placeholder="Alterar a foto de perfil">
+                        
+                    </div>
+                </div>
+                <div class="encapsulamento2">
+                    <h3>Nome</h3>
+                    <input type="text" name="Nome">
+                </div>
+                <p class="texto">Ajude as pessoas a descobrir sua conta usando o nome pelo qual você é conhecido: seu
+                    nome completo, apelido ou nome comercial.</p>
+                <p class="texto">Você pode alterar o seu nome apenas duas vezes a cada 14 dias.</p>
+                <div class="encapsulamento4">
+                    <h3>Nome de usuário</h3>
+                    <input type="text" name="Username">
+                </div>
+                <p class="texto">Na maioria dos casos, você poderá alterar seu nome de usuário novamente para
+                    nascimento_tr por mais 14 dias.</p>
+                <p class="texto">Informações pessoais Forneça suas informações pessoais, mesmo se a conta for usada para
+                    uma empresa, um animal de estimação ou outra coisa. Elas não farão parte do seu perfil público.</p>
+                <div class="encapsulamento2">
+                    <h3>Email</h3>
+                    <input type="text" name="Email">
+                </div>
+                <div class="encapsulamento3">
+                    <button type="submit">Enviar</button>
+                    <a asp-area="" asp-controller="" asp-action="Index">Desativar minha conta definitivamente</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>

@@ -11,14 +11,21 @@
 
 <main class="container container_main">
     <section class="perfis">
+        @{int cont = 0;}
     @foreach (var item in ViewBag.Usuarios)
     {
+        if (cont < 7)
+        {
         <div class="perfil">
             <img src="~/img/Usuarios/@item.FotoPerfil" alt="">
             <a href="#">
                 @item.Username
             </a>
         </div>
+        } else{
+            break;
+        }
+        cont++;
     }
     </section>
 

@@ -33,10 +33,11 @@ namespace ProjetoInstaDev.Controllers
             if (logado != null)
             {
                 HttpContext.Session.SetString("_UserId", logado.Split(";")[0]);
-                HttpContext.Session.SetString("_UserSenha", logado.Split(";")[1]);
+                HttpContext.Session.SetString("_UserSenha", logado.Split(";")[4]);
                 HttpContext.Session.SetString("_Username", logado.Split(";")[3]);
                 HttpContext.Session.SetString("_UserNome", logado.Split(";")[2]);
                 HttpContext.Session.SetString("_UserFoto", logado.Split(";")[5]);
+                
 
                 return LocalRedirect("~/Feed/Index");
 
@@ -54,6 +55,7 @@ namespace ProjetoInstaDev.Controllers
             HttpContext.Session.Remove("_Username");
             HttpContext.Session.Remove("_UserNome");
             HttpContext.Session.Remove("_UserFoto");
+            HttpContext.Session.Remove("_UserSenha");
 
             return LocalRedirect("~/Home/Index");
         }

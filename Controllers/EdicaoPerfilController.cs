@@ -1,3 +1,4 @@
+using System.IO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProjetoInstaDev.Models;
@@ -29,14 +30,42 @@ namespace ProjetoInstaDev.Controllers
 
             novoUsuario.IdUsuario = int.Parse(HttpContext.Session.GetString("_UserId"));
             novoUsuario.Senha = HttpContext.Session.GetString("_UserSenha");
-            novoUsuario.FotoPerfil = form["Imagem"];
             novoUsuario.Nome = form["Nome"];
             novoUsuario.Username = form["Username"];
             novoUsuario.Email = form["Email"];
 
+            if (form.Files.Count > 0)
+            {
+                var file = form.Files[0]; //armazena o arquivo do formulario dentro da variavel file
+                var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Img/Usuarios"); //cria a variavel pasta
+
+                if (!Directory.Exists(folder)) //cria a pasta
+                {
+                    Directory.CreateDirectory(folder);
+                }
+
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Img/", folder, file.FileName); //cria o caminho na variavel
+
+                using (var stream = new FileStream(path, FileMode.Create)) //criando e salvando o arquivo
+                {
+                    file.CopyTo(stream);//copia o arquivo no stream 
+                }
+
+                novoUsuario.FotoPerfil = file.FileName; //recebe o nome do arquivo
+
+            } else
+            {
+                novoUsuario.FotoPerfil = "padraoperfil.png"; //padrao.png é uma img padrao que ficará salva para quem não colocar nenhuma imagem
+            }
+
+            HttpContext.Session.SetString("_Username", novoUsuario.Username);
+            HttpContext.Session.SetString("_UserNome", novoUsuario.Nome);
+            HttpContext.Session.SetString("_UserFoto", novoUsuario.FotoPerfil);
+
             usuarioModel.AlterarDados(novoUsuario);
 
             ViewBag.Usuarios = usuarioModel.LerTodos();
+
 
             return LocalRedirect("~/Perfil/Index");
         }

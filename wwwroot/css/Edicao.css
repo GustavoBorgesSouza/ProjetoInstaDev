@@ -45,7 +45,7 @@ header{
     background-color: white;
 }
 
-.input{
+.input:required{
     text-align: center;
     border-radius: 10px;
     border-style: solid;
@@ -53,6 +53,7 @@ header{
     width: 215px;
     margin-left: 54px;
     background-color: white;
+
 }
 
 .menu_header{

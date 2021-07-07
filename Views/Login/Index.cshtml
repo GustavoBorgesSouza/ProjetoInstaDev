@@ -5,56 +5,55 @@
 
 
 <div class="titulo_pagina">
-    <h1>@ViewData["Title"]</h1>
 </div>
 
-<header></header>
+<body>
+    <main>
+        <div class="distanciar">
+            <div class="container_espacar">
+                <div class="container box_conteudo">
+                    <div class="box_img">
+                        <img class="img_header" src="~/assets_/logo.png" alt="logo">
+                    </div>
+                    <form method="POST" action='@Url.Action("Logar")'>
+                        <div class="box_form">
+                            <div class=" box_inputs margin ">
+                                <input type="text" placeholder="Email" name="Email" required />
+                            </div>
+                            <div class="box_inputs margin2">
+                                <input type="password" placeholder="Senha" name="Senha" required>
+                            </div>
+                            <div>
+                                <button class="btn_entrar margin2" type="submit">Entrar</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="box_linha">
+                        <hr>
+                        <span>ou</span>
+                        <hr>
+                    </div>
+                    <div class="box_senha">
+                        <a href="">Esqueceu a senha ?</a>
+                    </div>
+                </div>
 
-<div class="container container2">
-            <div class="box_conteudo">
-                <div class="box_img">
-                    <img class="img_header" src="~/assets_/logo.png" alt="logo">
-                </div>
-                <form method="POST" action='@Url.Action("Logar")'>
-                <div class=" box_inputs margin ">
-                    <input type="text" placeholder="Email" name="Email" required />
-                </div>
-                <div class="box_inputs margin2">
-                    <input type="password" placeholder="Senha" name="Senha" required>
-                </div>
-                <div>
-                    <button class="btn_entrar margin2" type="submit">Entrar</button>
-                </div>
-                </form>
-                <div class="box_linha">
-                    <hr>
-                    <span>ou</span>
-                    <hr>
-                </div>
-                <div class="box_senha">
-                    <a href="">Esqueceu a senha ?</a>
+                <div class="container box_conteudo2">
+                    <div class="box_cadastrar">
+                        <span>não tem uma conta?<a a asp-area="" asp-controller="Cadastro" asp-action="Index">
+                                cadastre-se</a></span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="container container3 box_conteudo">
-            <div class="box_cadastrar">
-                <span>não tem uma conta ?<a a asp-area="" asp-controller="Home" asp-action="Index">cadastre-se</a></span>
+            <div class="container2 box_obtenha">
+                <h4>Obtenha o aplicativo.</h4>
             </div>
-        </div>
-        <div class="container box_conteudo box_obtenha">
-            <h4>Obtenha o aplicativo.</h4>
-        </div>
-        
-            <div class="box_imagens">
+
+            <div class="container box_imagens">
                 <img class="img1" src="~/assets_/app_store 1.png" alt="apple">
                 <img class="img1" src="~/assets_/google_play 1.png" alt="android">
             </div>
+        </div>
+    </main>
+</body>
 
-<footer>
-    <span>.</span>
-<<<<<<< HEAD
-</footer>
-=======
-</footer>
-
->>>>>>> origin/feed

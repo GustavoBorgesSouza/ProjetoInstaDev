@@ -1,56 +1,69 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.logo{
+.logo {
     width: 165px;
     margin-top: 30px;
     margin-bottom: 10px;
-
 }
- span{
-     color: #909090;
- }
- 
- .box_cadastro{
-     background-color: #ffff;
-     height: 461px;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     margin: 0 auto;
- }
 
- input{
-     width: 267px;
-     height: 35px;
-     margin-top: 9px;
-     color: #909090;
-     background-color: #fafafa;
-     border: 1px solid #DCDCDC;
+span {
+    color: #909090;
+}
 
- }
+.box_cadastro {
+    background-color: #ffffff;
+    height: 461px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
 
-.span1{
+input {
+    width: 267px;
+    height: 35px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    margin-top: 9px;
+    color: #909090;
+    background-color: #fafafa;
+    border: 1px solid #DCDCDC;
+    margin-left: 37px;
+    padding-left: 10px;
+}
+
+.span1 {
     margin-top: 10px;
     margin-left: 66px;
     margin-right: 67px;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 19px;
     font-size: 14px;
     text-align: center;
+    color: #909090;
 }
 
-.span2{
+.span2 {
     margin-top: 17px;
     margin-bottom: 46px;
     width: 267px;
     font-size: 12px;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
     text-align: center;
-    
+    color: #909090;
 }
 
-.cadastro{
+.cadastro {
     background-color: #2686cc;
     width: 267px;
     height: 30px;
@@ -58,14 +71,18 @@
     margin-top: 17px;
 }
 
-.botão{
+.botão {
     color: #ffff;
     background-color: #2686cc;
+    border-style: solid;
+    border-color: #2686cc;
+    border-radius: 2px;
     margin-top: 17px;
     padding: 8px 100px;
+    margin-left: 37px;
 }
 
-.box_log{
+.box_log {
     width: 342px;
     height: 75px;
     background-color: #ffff;
@@ -74,27 +91,31 @@
     align-items: center;
     margin: 0 auto;
     margin-top: 9px;
-    
 }
 
-.cad{
+.cad {
     color: #353535;
     margin-top: 30px;
-    font-size: 12px;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
 }
 
-body{
+body {
     background-color: #fafafa;
 }
 
-.yey{
+.yey {
     text-decoration: none;
     color: #2686cc;
 }
 
-.alio{
+.alio {
     background-color: transparent;
-    width: 113px;
+    width: 150px;
     height: 16px;
     display: flex;
     flex-direction: column;
@@ -102,31 +123,36 @@ body{
     font-size: 12px;
     color: #353535;
     margin-top: 28px;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
 }
 
-.appleplay{
+.appleplay {
     display: flex;
     flex-direction: row;
     margin: 0 auto;
     margin-top: 29px;
-    
 }
 
-.maca{
+.maca {
     width: 133px;
     height: 39px;
     margin: 0 auto;
     margin-right: 5px;
 }
 
-.play{
+.play {
     width: 133px;
     height: 39px;
-    
 }
 
-.largura{
+.largura {
     width: 342px;
+    height: 550px;
     display: flex;
     flex-direction: column;
     align-items: center;

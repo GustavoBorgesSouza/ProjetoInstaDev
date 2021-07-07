@@ -18,6 +18,7 @@ namespace ProjetoInstaDev.Controllers
             ViewBag._UserNome = HttpContext.Session.GetString("_UserNome");
             ViewBag._UserFoto = HttpContext.Session.GetString("_UserFoto");
             ViewBag._UserEmail = HttpContext.Session.GetString("_UserEmail");
+            ViewBag._UserSenha = HttpContext.Session.GetString("_UserSenha");
             
             return View();
         }
@@ -27,6 +28,7 @@ namespace ProjetoInstaDev.Controllers
             Usuario novoUsuario = new Usuario();
 
             novoUsuario.IdUsuario = int.Parse(HttpContext.Session.GetString("_UserId"));
+            novoUsuario.Senha = HttpContext.Session.GetString("_UserSenha");
             novoUsuario.FotoPerfil = form["Imagem"];
             novoUsuario.Nome = form["Nome"];
             novoUsuario.Username = form["Username"];
@@ -39,9 +41,8 @@ namespace ProjetoInstaDev.Controllers
             return LocalRedirect("~/Perfil/Index");
         }
 
-        [Route("Excluir")]
+        [Route("Excluir/{id}")]
         public IActionResult Excluir(int id){
-            id = ViewBag._UserId;
             usuarioModel.DeletarConta(id);
             ViewBag.Usuarios = usuarioModel.LerTodos();
 

@@ -11,9 +11,11 @@
     margin: 0 auto;
 }
 
+
 main, body{
     background: #fafafa;
     margin-top: 2%;
+    height: auto;
 }
 
 .foto_perfil{

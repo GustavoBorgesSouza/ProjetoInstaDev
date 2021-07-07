@@ -12,6 +12,7 @@ namespace ProjetoInstaDev.Models
         public string UsernameUsuario { get; set; }
         public string FotoUsuario{get; set;}
         public int IdPost { get; set; }
+        public int IdUsuario { get; set; }
         public bool repetir { get; set;}
 
         private const string CAMINHO = "Database/Post.csv";
@@ -23,7 +24,7 @@ namespace ProjetoInstaDev.Models
 
         private string Preparar(Post p)
         {
-            return $"{p.IdPost};{p.FotoPost};{p.Descricao};{p.UsernameUsuario};{p.FotoUsuario}";
+            return $"{p.IdPost};{p.FotoPost};{p.Descricao};{p.UsernameUsuario};{p.FotoUsuario};{p.IdUsuario}";
         }
 
         public void CriarPost(Post p)
@@ -47,6 +48,7 @@ namespace ProjetoInstaDev.Models
                 post.Descricao = linha[2];
                 post.UsernameUsuario = linha[3];
                 post.FotoUsuario = linha[4];
+                post.IdUsuario = int.Parse(linha[5]);
                 
 
                 posts.Add(post);
@@ -57,32 +59,33 @@ namespace ProjetoInstaDev.Models
             return posts;
 
         }
-        public List<Post> MostrarPosts(string UnRecebido)
-        {
-            List<Post> posts = new List<Post>();
-            string[]linhas = File.ReadAllLines(CAMINHO);
+        // public List<Post> MostrarPosts(string UnRecebido)
+        // {
+        //     List<Post> posts = new List<Post>();
+        //     string[]linhas = File.ReadAllLines(CAMINHO);
 
-            foreach (var item in linhas)
-            {
-                string[] linha = item.Split(";");
-                Post post = new Post();
+        //     foreach (var item in linhas)
+        //     {
+        //         string[] linha = item.Split(";");
+        //         Post post = new Post();
 
-                if (post.UsernameUsuario == UnRecebido)
-                {
-                    post.IdPost = Int32.Parse(linha[0]);
-                    post.FotoPost = linha[1];
-                    post.Descricao = linha[2];
-                    post.UsernameUsuario = linha[3];
-                    post.FotoUsuario = linha[4];
+        //         if (post.UsernameUsuario == UnRecebido)
+        //         {
+        //             post.IdPost = Int32.Parse(linha[0]);
+        //             post.FotoPost = linha[1];
+        //             post.Descricao = linha[2];
+        //             post.UsernameUsuario = linha[3];
+        //             post.FotoUsuario = linha[4];
+        //             post.IdUsuario = int.Parse(linha[5]);
 
-                    posts.Add(post);
-                }
+        //             posts.Add(post);
+        //         }
                 
-            }
+        //     }
 
-            return posts;
+        //     return posts;
             
-        }
+        // }
 
         public bool VerificandoId(Int32 id){
             List<string> PostsCsv = LerTodasLinhasCSV("Database/Post.csv");

@@ -21,6 +21,7 @@ namespace ProjetoInstaDev.Controllers
             ViewBag._Username = HttpContext.Session.GetString("_Username");
             ViewBag._UserNome = HttpContext.Session.GetString("_UserNome");
             ViewBag._UserFoto = HttpContext.Session.GetString("_UserFoto");
+            ViewBag._UserId = HttpContext.Session.GetString("_UserId");
             List<Post> lista = postModel.MostrarPosts();
             lista.Reverse();
             ViewBag.Posts = lista;
@@ -39,7 +40,7 @@ namespace ProjetoInstaDev.Controllers
                 repetir = postModel.VerificandoId(IdPost);
 
             } while(repetir == true);
-
+            novoPost.IdUsuario = int.Parse(HttpContext.Session.GetString("_UserId"));
             novoPost.UsernameUsuario = HttpContext.Session.GetString("_Username");
             novoPost.FotoUsuario = HttpContext.Session.GetString("_UserFoto");
             novoPost.IdPost = IdAleatorio.Next();

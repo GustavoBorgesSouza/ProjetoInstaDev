@@ -21,7 +21,7 @@
                 <h1>@ViewBag._Username</h1>
 
                 <div class="texto_conteudo">
-                    <p>0 publicações</p>
+                    <p>x publicações</p>
                     <p>128 seguindo</p>
                     <p>214 seguidores</p>
                 </div>
@@ -48,63 +48,66 @@
     <div class="posicionamento">
         @foreach (var item in ViewBag.Posts)
         {
-            <div class="container_post">
-                <div class="organizacao_post">
-                    <a href="#"><img class="fotopost" src="~/Img/Posts/@item.FotoPost" alt="foto post"></a>
+            @if (@ViewBag._UserId == @item.IdUsuario.ToString())
+            {
+                <div class="container_post">
+                    <div class="organizacao_post">
+                        <a href="#"><img class="fotopost" src="~/Img/Posts/@item.FotoPost" alt="foto post"></a>
 
-                    <div class="complemento_post">
-                        <div class="usuario">
-                            <a href="#"><img class="foto_usuario" src="~/Img/Usuarios/@item.FotoUsuario" alt=""></a>
+                        <div class="complemento_post">
+                            <div class="usuario">
+                                <a href="#"><img class="foto_usuario" src="~/Img/Usuarios/@item.FotoUsuario" alt=""></a>
 
-                            <div class="usuario_post">
-                                <h3>@item.UsernameUsuario</h3>
-                                <span class="local">@item.Descricao</span>
+                                <div class="usuario_post">
+                                    <h3>@item.UsernameUsuario</h3>
+                                    <span class="local">@item.Descricao</span>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="icones">
-                            <div class="curtida_comentario">
-                                <img src="~/assets_/Vector (1).png" alt="curtida">
-                                <i class="far fa-comment"></i>
+                            <div class="icones">
+                                <div class="curtida_comentario">
+                                    <img src="~/assets_/Vector (1).png" alt="curtida">
+                                    <i class="far fa-comment"></i>
+                                </div>
+                                <p>1954 curtidas</p>
                             </div>
-                            <p>1954 curtidas</p>
-                        </div>
 
-                        <div class="comentario">
-                            <div class="user_comentario">
-                                <span class="user">fausto_silva</span>
-                                <span class="texto_comentario">Esse cara é fera bixo!!!</span>
+                            <div class="comentario">
+                                <div class="user_comentario">
+                                    <span class="user">fausto_silva</span>
+                                    <span class="texto_comentario">Esse cara é fera bixo!!!</span>
+                                </div>
+                                <img class="coracao_pequeno" src="~/assets_/coracao_pequeno.png" alt="">
                             </div>
-                            <img class="coracao_pequeno" src="~/assets_/coracao_pequeno.png" alt="">
-                        </div>
 
-                        <div class="comentario">
-                            <div class="user_comentario">
-                                <span class="user">yes_baby</span>
-                                <span class="texto_comentario">thank you</span>
+                            <div class="comentario">
+                                <div class="user_comentario">
+                                    <span class="user">yes_baby</span>
+                                    <span class="texto_comentario">thank you</span>
+                                </div>
+                                <img class="coracao_pequeno" src="~/assets_/coracao_pequeno.png" alt="">
                             </div>
-                            <img class="coracao_pequeno" src="~/assets_/coracao_pequeno.png" alt="">
-                        </div>
 
-                        <div class="comentario">
-                            <div class="user_comentario">
-                                <span class="user">adriano_stark</span>
-                                <span class="texto_comentario">Quando eu adormecer, vou sonhar com você. É sempre
-                                    você.</span>
+                            <div class="comentario">
+                                <div class="user_comentario">
+                                    <span class="user">adriano_stark</span>
+                                    <span class="texto_comentario">Quando eu adormecer, vou sonhar com você. É sempre
+                                        você.</span>
+                                </div>
+                                <img class="coracao_pequeno" src="~/assets_/coracao_pequeno.png" alt="">
                             </div>
-                            <img class="coracao_pequeno" src="~/assets_/coracao_pequeno.png" alt="">
-                        </div>
 
-                        <div class="comentario">
-                            <div class="user_comentario">
-                                <span class="user">yes_baby</span>
-                                <span class="texto_comentario">Yes baby!!</span>
+                            <div class="comentario">
+                                <div class="user_comentario">
+                                    <span class="user">yes_baby</span>
+                                    <span class="texto_comentario">Yes baby!!</span>
+                                </div>
+                                <img class="coracao_pequeno" src="~/assets_/coracao_pequeno.png" alt="">
                             </div>
-                            <img class="coracao_pequeno" src="~/assets_/coracao_pequeno.png" alt="">
+                            <a class="todos_comentarios" href="#">Ver todos os 585 comentários</a>
                         </div>
-                        <a class="todos_comentarios" href="#">Ver todos os 585 comentários</a>
                     </div>
                 </div>
-            </div>
+            }
         }
     </div>

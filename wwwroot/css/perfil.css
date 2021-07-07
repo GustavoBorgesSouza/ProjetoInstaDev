@@ -108,12 +108,13 @@ h2{
 
 .foto_usuario{
     width: 65px;
-    height: 65px;
+    height: 66px;
+    border-radius: 115px;
 }
 
 .coracao_pequeno{
     width: 15px;
-    height: 15px;
+    height: 13px;
 }
 
 .publicacoes{

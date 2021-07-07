@@ -30,7 +30,7 @@ main, body{
 .posicionamento_fotoperfil{
     width: 828px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin-top: 7%;
     margin-right: 8%;
 }
@@ -192,7 +192,7 @@ h3{
 
 .comentario{
     display: flex;
-    width: 414px;
+    width: 430px;
     justify-content: space-between;
     margin-top: -4%;  /* desculpa por tamanha atrocidade mas foi preciso */
 }

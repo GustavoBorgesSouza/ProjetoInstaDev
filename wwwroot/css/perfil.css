@@ -6,16 +6,12 @@
     box-sizing: border-box;
 }
 
-body{
-    background-color: #fafafa;
-}
-
 .container{
     width: 1200px;
     margin: 0 auto;
 }
 
-main{
+main, body{
     background: #fafafa;
     margin-top: 2%;
 }
@@ -124,6 +120,7 @@ h2{
     height: 87px;
     width: 68vw;
     margin-top: 2%;
+    border-top: 1px solid #DCDCDC
 }
 
 .conteudo_publicacoes{
